@@ -1,0 +1,571 @@
+{% extends 'layout.html'%} 
+{%block tittle%}Inicio{%endblock%}
+{% block content %}
+{% with messages = get_flashed_messages() %}
+	{% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-success alert-dismissible fade show" role="alert" id="alert">
+        {{message}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+	  {% endfor %}
+	{% endif %}
+{% endwith %}
+<div class="container-md" id="content">
+        <div class="row">
+          <div class="col-xs-12 col-xl-6">
+            <div class="box">
+    
+              <div class="box-icon">
+                <span><img src="{{ url_for('static', filename='img/reportes.jpg')}}" class="reporte"></span>
+              </div>
+    
+              <div class="info">
+
+                <h4 class="text-center">Registrar reportes</h4>
+    
+                <div class="allow-select">
+    
+                  <div class="card bg-primary">
+                    <a href="" id="" data-toggle="modal">
+                      <div class="card-body text-center" id="btn-modal-F024">
+                        Bitácora-F024
+                      </div>
+                    </a>
+                  </div>
+    
+                  <div class="card bg-primary">
+                    <a href="" id="" data-toggle="modal" data-target="#PPA–F028">
+                      <div class="card-body text-center">
+                        Bitácora-F028
+                      </div>
+                    </a>
+                  </div>
+    
+                  <div class="card bg-primary">
+                    <a href="" id="" data-toggle="modal" data-target="#PPA–F029">
+                      <div class="card-body text-center">
+                        Bitácora-F029
+                      </div>
+                    </a>
+                  </div>
+    
+                </div>
+              </div>
+    
+            </div>
+          </div>
+    
+          <!--Tarjetas de ultimas conexiones-->
+          <div class="col-xs-12  col-xl-6">
+            <div class="box">
+              
+              <div class="box-icon">
+                <span><i class="far fa-bell" style="font-size: 80px; color: #404040;"></i></span>
+              </div>
+    
+              <div class="info">
+                
+                <h4 class="text-center">Notificaciones</h4>
+    
+                <div class="allow-select">
+    
+                  <div class="card bg-primary">
+                    <div class="card-body text-center">
+                      This is some text within a card body.
+                    </div>
+                  </div>
+                  
+                  <div class="card bg-primary">
+                    <div class="card-body text-center">
+                      This is some text within a card body.
+                    </div>
+                  </div>
+                  
+                  <div class="card bg-primary">
+                    <div class="card-body text-center">
+                      This is some text within a card body.
+                    </div>
+                  </div>
+    
+                </div>
+                
+              </div>
+              
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Modal PPA–F028 -->
+<div class="modal" tabindex="-1" role="dialog" id="PPA–F028" onblur=borrarBitacoras()>
+  <div class="modal-dialog" role="document" >
+    <div class="modal-content borde">
+      <div class="modal-header fondo-header">
+        <h5 class="modal-title" style="color: white;">Bitácora PPA–F028 - Fisicoquímicos de agua de la red y filtros</h5>
+        <button type="button" class="close" style="color: white; opacity: 100; outline: none;" data-dismiss="modal" aria-label="Close" onclick="borrarBitacorasDelBoton() " >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <p>Ingrese la información.</p>
+        <form action="/f028" method="post">
+          <div class="grupo">
+            <label>Fecha</label>
+            <input class="form-control" type="date" value="" id="Fecha-PPA–F028" name="Fecha-PPA–F028">
+          </div>
+          <div class="grupo">
+            <label >Hora de Muestra</label>
+            <input class="form-control" type="time" value="" id="Hora-Muestra-PPA–F028" name="Hora-Muestra-PPA–F028">
+          </div>
+          <div class="grupo">
+            <label>Hora de Análisis</label>
+            <input class="form-control" type="time" value="" id="Hora-Analisis-PPA–F028" name="Hora-Analisis-PPA–F028">
+          </div>
+          <div class="grupo">
+            <input type="number" name="pH1-PPA–F028" id="pH1-PPA–F028" required class="input-text"><span class="barra"></span>
+            <label class="label-text">pH1</label>
+          </div>
+          <div class="grupo">
+            <input type="number" name="pH2-PPA–F028" id="pH2-PPA–F028" required class="input-text"><span class="barra"></span>
+            <label class="label-text">pH2</label>
+          </div>
+          <div class="grupo">
+            <input type="number" name="Olor-PPA–F028" id="Olor-PPA–F028" required class="input-text"><span class="barra"></span>
+            <label class="label-text">CE (µS/cm)</label>
+          </div>
+          <div class="grupo">
+            <input type="number" name="SD-PPA–F028" id="SD-PPA–F028" required class="input-text"><span class="barra"></span>
+            <label class="label-text">SD (ppm)</label>
+          </div>
+          <div class="grupo">
+            <input type="number" name="Cloro-Libre-Residual-PPA–F028" id="Cloro-Libre-Residual-PPA–F028" required class="input-text"><span class="barra"></span>
+            <label class="label-text">Cloro Libre Residual</label>
+          </div>
+          <div class="grupo">
+            <input type="number" name="T-PPA–F028" id="T-PPA–F028" required class="input-text"><span class="barra"></span>
+            <label class="label-text">T (°C)</label>
+          </div>
+          <div class="grupo">
+            <input type="number" name="Dureza-PPA–F028" id="Dureza-PPA–F028" required class="input-text"><span class="barra"></span>
+            <label class="label-text">Dureza (ppm)</label>
+          </div>
+          <p>
+            <b>Notas:</b>
+            <br>
+            <b>pH1</b> corresponde a las unidades obtenidas de la medición de pH con KIT de goteo con rojo de fenol.
+            <b>pH2</b> corresponde a las unidades obtenidas de la medición de pH con equipo multiparámetro.
+          </p>
+          <div class="modal-footer">
+            <button type="submit" id="btn-registrar-F028" class="btn btn-primary submit" disabled>Guardar</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick=borrarBitacorasDelBoton() >Cerrar</button>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Modal PPA–F029 -->
+  <div class="modal" tabindex="-1" role="dialog" id="PPA–F029" onblur=borrarBitacoras()>
+  <div class="modal-dialog" role="document" >
+    <div class="modal-content borde">
+      <div class="modal-header fondo-header">
+        <h5 class="modal-title" style="color: white;">Bitácora PPA–F029 - Fisicoquímicos de agua producto</h5>
+        <button type="button" class="close" style="color: white; opacity: 100; outline: none;" data-dismiss="modal" aria-label="Close" onclick=borrarBitacorasDelBoton()>
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <p>Ingrese la información.</p>
+        <form action="/f029" method="post">
+          <div class="grupo">
+            <label>Fecha</label>
+            <input class="form-control" type="date" value="" id="Fecha-PPA-F029" name="Fecha-PPA-F029">
+          </div>
+          <div class="grupo">
+            <label>Hora de Muestreo</label>
+            <input class="form-control" type="time" value="" id="Hora-Muestreo-PPA-F029" name="Hora-Muestreo-PPA-F029">
+          </div>
+          <div class="grupo">
+            <label>Hora de Análisis</label>
+            <input class="form-control" type="time" value="" id="Hora-Analisis-PPA-F029" name="Hora-Analisis-PPA-F029">
+          </div>
+          <div class="grupo">
+            <input type="text" name="ID-PPA-F029" id="ID-PPA-F029" required class="input-text"><span class="barra"></span>
+            <label class="label-text">ID</label>
+          </div>
+          <div class="grupo">
+            <input type="number" name="Cloro-Libre-Residual-PPA-F029" id="Cloro-Libre-Residual-PPA-F029" required class="input-text"><span class="barra"></span>
+            <label class="label-text">Cloro Libre Residual</label>
+          </div>
+          <div class="grupo">
+            <input type="number" name="pH1-PPA-F029" id="pH1-PPA-F029" required class="input-text"><span class="barra"></span>
+            <label class="label-text">pH1</label>
+          </div>
+          <div class="grupo">
+            <input type="number" name="pH2-PPA-F029" id="pH2-PPA-F029" required class="input-text"><span class="barra"></span>
+            <label class="label-text">pH2</label>
+          </div>
+          <div class="grupo">
+            <input type="number" name="Olor-PPA-F029" id="Olor-PPA-F029" required class="input-text"><span class="barra"></span>
+            <label class="label-text">CE (µS/cm)</label>
+          </div>
+          <div class="grupo">
+            <input type="number" name="SD-PPA-F029" id="SD-PPA-F029" required class="input-text"><span class="barra"></span>
+            <label class="label-text">SD (ppm)</label>
+          </div>
+          <div class="grupo">
+            <input type="number" name="T-PPA-F029" id="T-PPA-F029" required class="input-text"><span class="barra"></span>
+            <label class="label-text">T (°C)</label>
+          </div>
+          <p>
+            <b>Notas:</b>
+            <br>
+            <b>pH1</b> corresponde a las unidades obtenidas de la medición de pH con KIT de goteo con rojo de fenol.
+            <b>pH2</b> corresponde a las unidades obtenidas de la medición de pH con equipo multiparámetro.
+          </p>
+          <div class="modal-footer">
+            <button type="submit" id="btn-registrar-F029" class="btn btn-primary submit" disabled>Guardar</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick=borrarBitacorasDelBoton()>Cerrar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+<!-- PPA-F024 -->
+<div class="modal" tabindex="-1" role="dialog" id="PPA-F024" onblur=borrarBitacoras()>
+  <div class="modal-dialog modal-margin" role="document" >
+    <div class="modal-content borde">
+      <div class="modal-header fondo-header">
+        <h5 class="modal-title" style="color: white;">Bitácora F024 - Buenas prácticas de higiene</h5>
+        <button type="button" class="close" style="color: white; opacity: 100; outline: none;" data-dismiss="modal" aria-label="Close" onclick=borrarBitacorasDelBoton()>
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <p>Ingrese la información.</p>
+        <form action="/f024" method="post">
+          <div class="grupo">
+            <label>Fecha:</label>
+            <input class="form-control" type="date" name="Fecha-F024" id="Fecha-F024" required>
+          </div>
+  
+          <div>
+  
+            <div class="grupo-quest">
+              <input type="text" required class="input-question" readonly><span class="barra"></span>
+              <label class="label-text-quest">1.El área de trabajo, ¿se encuentra libre de ventilación?</label>
+            </div>
+  
+            <div class="grupo">
+              <table class="table table-check  table-check-t table-responsive-sm">
+                <tbody>
+                    <tr>
+                      <th class="table-check-td" scope="col">Porcentaje de cumplimiento (%)</th>
+                      <th class="table-check-td" scope="col">No. de revisiones</th>
+                    </tr>
+    
+                    <tr>
+                      <td class="table-check-t" scope="row"><input type="number" name="percent-1" required class="input-text" id="percent-1" onkeyup=promediar()><span class="barra"></span></td>
+                      <td class="table-check-t" scope="row"><input type="number" name="revision-1" required class="input-text" id="revision-1" onkeyup=sumaRevisiones()><span class="barra"></span></td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+            
+          </div>
+  
+          <div>
+  
+            <div class="grupo-quest">
+              <input type="text" required class="input-question" readonly><span class="barra"></span>
+              <label class="label-text-quest">2.El personal, ¿cuenta con las vestimenta y el calzado adecuado?</label>
+            </div>
+  
+            <div class="grupo">
+              <table class="table table-check  table-check-t table-responsive-sm">
+                <tbody>
+                    <tr>
+                      <th class="table-check-td" scope="col">Porcentaje de cumplimiento (%)</th>
+                      <th class="table-check-td" scope="col">No. de revisiones</th>
+                    </tr>
+    
+                    <tr>
+                      <td class="table-check-t" scope="row"><input type="number"  name="percent-2" required class="input-text" id="percent-2" onkeyup=promediar()><span class="barra"></span></td>
+                      <td class="table-check-t" scope="row"><input type="number"  name="revision-2" required class="input-text" id="revision-2" onkeyup=sumaRevisiones()><span class="barra"></span></td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+  
+          </div>
+  
+          <div>
+  
+            <div class="grupo-quest">
+              <input type="text" required class="input-question" readonly><span class="barra"></span>
+              <label class="label-text-quest">3.El personal, ¿utiliza cofia y cubrebocas correctamente?</label>
+            </div>
+  
+            <div class="grupo">
+              <table class="table table-check  table-check-t table-responsive-sm">
+                <tbody>
+                    <tr>
+                      <th class="table-check-td" scope="col">Porcentaje de cumplimiento (%)</th>
+                      <th class="table-check-td" scope="col">No. de revisiones</th>
+                    </tr>
+    
+                    <tr>
+                      <td class="table-check-t" scope="row"><input type="number" name="percent-3" required class="input-text" id="percent-3" onkeyup=promediar()><span class="barra"></span></td>
+                      <td class="table-check-t" scope="row"><input type="number" name="revision-3" required class="input-text" id="revision-3" onkeyup=sumaRevisiones()><span class="barra"></span></td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+  
+          </div>
+  
+          <div>
+  
+            <div class="grupo-quest">
+              <input type="text" required class="input-question" readonly><span class="barra"></span>
+              <label class="label-text-quest">4.El personal, ¿se encuentra libre de objetos personales, joyería, cartera, etc?</label>
+            </div>
+  
+            <div class="grupo">
+              <table class="table table-check  table-check-t table-responsive-sm">
+                <tbody>
+                    <tr>
+                      <th class="table-check-td" scope="col">Porcentaje de cumplimiento (%)</th>
+                      <th class="table-check-td" scope="col">No. de revisiones</th>
+                    </tr>
+    
+                    <tr>
+                      <td class="table-check-t" scope="row"><input type="number" name="percent-4" required class="input-text" id="percent-4" onkeyup=promediar()><span class="barra"></span></td>
+                      <td class="table-check-t" scope="row"><input type="number" name="revision-4" required class="input-text" id="revision-4" onkeyup=sumaRevisiones()><span class="barra"></span></td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+  
+          </div>
+  
+          <div>
+  
+            <div class="grupo-quest">
+              <input type="text" required class="input-question" readonly><span class="barra"></span>
+              <label class="label-text-quest">5.El personal, ¿evita el uso de celular en las áreas de proceso?</label>
+            </div>
+  
+            <div class="grupo">
+              <table class="table table-check  table-check-t table-responsive-sm">
+                <tbody>
+                    <tr>
+                      <th class="table-check-td" scope="col">Porcentaje de cumplimiento (%)</th>
+                      <th class="table-check-td" scope="col">No. de revisiones</th>
+                    </tr>
+    
+                    <tr>
+                      <td class="table-check-t" scope="row"><input type="number" name="percent-5" required class="input-text" id="percent-5" onkeyup=promediar()><span class="barra"></span></td>
+                      <td class="table-check-t" scope="row"><input type="number" name="revision-5" required class="input-text" id="revision-5" onkeyup=sumaRevisiones()><span class="barra"></span></td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+  
+          </div>
+  
+          <div>
+  
+            <div class="grupo-quest">
+              <input type="text" required class="input-question" readonly><span class="barra"></span>
+              <label class="label-text-quest">6.El personal, ¿evita traer uñas largas y sucias?</label>
+            </div>
+  
+            <div class="grupo">
+              <table class="table table-check  table-check-t table-responsive-sm">
+                <tbody>
+                    <tr>
+                      <th class="table-check-td" scope="col">Porcentaje de cumplimiento (%)</th>
+                      <th class="table-check-td" scope="col">No. de revisiones</th>
+                    </tr>
+    
+                    <tr>
+                      <td class="table-check-t" scope="row"><input type="number" name="percent-6" required class="input-text" id="percent-6" onkeyup=promediar()><span class="barra"></span></td>
+                      <td class="table-check-t" scope="row"><input type="number" name="revision-6" required class="input-text" id="revision-6" onkeyup=sumaRevisiones()><span class="barra"></span></td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+  
+          </div>
+  
+          <div>
+  
+            <div class="grupo-quest">
+              <input type="text" required class="input-question" readonly><span class="barra"></span>
+              <label class="label-text-quest">7.El personal, ¿se lava las manos adecuada y regularmente?</label>
+            </div>
+  
+            <div class="grupo">
+              <table class="table table-check  table-check-t table-responsive-sm">
+                <tbody>
+                    <tr>
+                      <th class="table-check-td" scope="col">Porcentaje de cumplimiento (%)</th>
+                      <th class="table-check-td" scope="col">No. de revisiones</th>
+                    </tr>
+    
+                    <tr>
+                      <td class="table-check-t" scope="row"><input type="number"  name="percent-7" required class="input-text" id="percent-7" onkeyup=promediar()><span class="barra"></span></td>
+                      <td class="table-check-t" scope="row"><input type="number" name="revision-7" required class="input-text" id="revision-7" onkeyup=sumaRevisiones()><span class="barra"></span></td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+  
+          </div>
+  
+          <div>
+  
+            <div class="grupo-l">
+              <input type="text" required class="input-question" readonly><span class="barra"></span>
+              <label class="label-text-quest-l">8.Si el personal tiene heridas, ¿las mantiene protegidas debidamente para evitar contaminación?</label>
+            </div>
+  
+            <div class="grupo">
+              <table class="table table-check  table-check-t table-responsive-sm">
+                <tbody>
+                    <tr>
+                      <th class="table-check-td" scope="col">Porcentaje de cumplimiento (%)</th>
+                      <th class="table-check-td" scope="col">No. de revisiones</th>
+                    </tr>
+    
+                    <tr>
+                      <td class="table-check-t" scope="row"><input type="number"  name="percent-8" required class="input-text" id="percent-8" onkeyup=promediar()><span class="barra"></span></td>
+                      <td class="table-check-t" scope="row"><input type="number" name="revision-8" required class="input-text" id="revision-8" onkeyup=sumaRevisiones()><span class="barra"></span></td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+  
+          </div>
+  
+          <div>
+  
+            <div class="grupo-l">
+              <input type="text" required class="input-question" readonly><span class="barra"></span>
+              <label class="label-text-quest-l">9.El personal, ¿se excluye de labores que implican contacto directo si presenta cualquier cuadro infeccioso?</label>
+            </div>
+  
+            <div class="grupo">
+              <table class="table table-check  table-check-t table-responsive-sm">
+                <tbody>
+                    <tr>
+                      <th class="table-check-td" scope="col">Porcentaje de cumplimiento (%)</th>
+                      <th class="table-check-td" scope="col">No. de revisiones</th>
+                    </tr>
+    
+                    <tr>
+                      <td class="table-check-t" scope="row"><input type="number" name="percent-9" required class="input-text" id="percent-9" onkeyup=promediar()><span class="barra"></span></td>
+                      <td class="table-check-t" scope="row"><input type="number"  name="revision-9" required class="input-text" id="revision-9" onkeyup=sumaRevisiones()><span class="barra"></span></td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+  
+          </div>
+  
+          <div>
+  
+            <div class="grupo-l">
+              <input type="text" required class="input-question" readonly><span class="barra"></span>
+              <label class="label-text-quest-l">10.El personal, ¿evita escupir, mascar o consumir cualquier tipo de alimentos o bebidas?</label>
+            </div>
+  
+            <div class="grupo">
+              <table class="table table-check  table-check-t table-responsive-sm">
+                <tbody>
+                    <tr>
+                      <th class="table-check-td" scope="col">Porcentaje de cumplimiento (%)</th>
+                      <th class="table-check-td" scope="col">No. de revisiones</th>
+                    </tr>
+    
+                    <tr>
+                      <td class="table-check-t" scope="row"><input type="number" name="percent-10" required class="input-text" id="percent-10" onkeyup=promediar()><span class="barra"></span></td>
+                      <td class="table-check-t" scope="row"><input type="number" name="revision-10" required class="input-text" id="revision-10" onkeyup=sumaRevisiones()><span class="barra"></span></td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+  
+          </div>
+  
+          <div>
+  
+            <div class="grupo-quest">
+              <input type="text" required class="input-question" readonly><span class="barra"></span>
+              <label class="label-text-quest">11.¿Se mantienen limpias las herramientas y área de trabajo?</label>
+            </div>
+  
+            <div class="grupo">
+              <table class="table table-check  table-check-t table-responsive-sm">
+                <tbody>
+                    <tr>
+                      <th class="table-check-td" scope="col">Porcentaje de cumplimiento (%)</th>
+                      <th class="table-check-td" scope="col">No. de revisiones</th>
+                    </tr>
+    
+                    <tr>
+                      <td class="table-check-t" scope="row"><input type="number" name="percent-11" required class="input-text" id="percent-11" onkeyup=promediar()><span class="barra"></span></td>
+                      <td class="table-check-t" scope="row"><input type="number" name="revision-11" required class="input-text" id="revision-11" onkeyup=sumaRevisiones()><span class="barra"></span></td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+  
+          </div>
+  
+          <div class="grupo">
+            <div class="d-flex justify-content-center">
+              <label>Promedio de cumplimiento (%)</label>
+            </div>
+    
+            <div>
+              <input type="number" required class="input-text text-center"  name="Promedio-F024" id="Promedio-F024" readonly="readonly"><span class="barra"></span>
+            </div>
+          </div>
+  
+          <div class="grupo">
+            <div class="d-flex justify-content-center">
+              <label>Revisiones totales</label>
+            </div>
+    
+            <div>
+              <input type="number" required class="input-text text-center" name="Revisiones-F024" id="Revisiones-F024" readonly="readonly"><span class="barra"></span>
+            </div>
+          </div>
+          
+  
+          <div class="grupo">
+            <textarea class="input-textarea" name="Acciones-correctivas-F024" id="Acciones-correctivas-F024" cols="30" rows="5" required></textarea><span class="barra"></span>
+            <label class="label-textarea">Acciones correctivas</label>
+          </div>
+  
+          <div class="modal-footer">
+            <button type="submit" id="btn-registrar-F024" class="btn btn-primary submit" disabled>Guardar</button>
+            <button type="button" id="btn-cerrar-F024" class="btn btn-secondary" data-dismiss="modal" onclick=borrarBitacorasDelBoton()>Cerrar</button>
+          </div>
+        </form>
+      
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- /#page-content-wrapper -->
+{%endblock%} 
+  

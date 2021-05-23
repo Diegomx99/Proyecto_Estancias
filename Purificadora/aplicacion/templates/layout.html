@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!--Poner titulo e icono a la pestaña :)-->
+  <title>{% block tittle %}{%endblock%}</title>
+  <link rel="icon" href="{{ url_for('static', filename='img/agua.svg')}}"  type="image/png">
+  <!-- Bootstrap core CSS -->
+  <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="{{ url_for('static', filename='css/simple-sidebar.css')}}" rel="stylesheet">
+
+  <!--Fontawesome-->
+  <script src="https://kit.fontawesome.com/cbef752df4.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body id="body">
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light " id="sidebar-wrapper">
+      <div class="sidebar-heading"><a href="/home" class="list-group-item list-group-item-action bg-light">Inicio</a></div><div class="list-group list-group-flush">
+       <!-- <a href="#" class="list-group-item list-group-item-action bg-light">Consultar Bitácora</a> -->
+        <div class="dropright" id="dropright-sidebar">
+          <a class="dropdown-toggle list-group-item list-group-item-action bg-light dropdown-border" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Registrar
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/distribucion">Distribución</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/fisicoquimicos">Fisicoquímicos</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/mantenimiento">Mantenimiento</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/produccion">Producción</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/servicios">Servicios</a>
+          </div>
+        </div>
+    <!--  <a href="#" class="list-group-item list-group-item-action bg-light">Editar Bitácora</a> -->
+    <!--   <a href="#" class="list-group-item list-group-item-action bg-light">Eliminar Bitácora</a> -->
+        <a href="/logout" class="list-group-item list-group-item-action bg-light">Cerrar Sesión</a>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+      <header>
+      <nav class="navbar navbar-dark ">
+        <button id="menu-toggle" class="navbar-toggler" type="button" data-toggle="collapse"aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <span class="navbar-brand" id="username-brand">Bienvenido: {{username}} {{apellido}}</span>
+        <span class="navbar-brand" href="#"> <a class="navbar-brand" href="/home"> <span>Planta Purificadora</span>  <img src="{{ url_for('static', filename='img/agua.svg')}}" width="30" height="30" class="d-inline-block" alt="" loading="lazy"></a> </span>      
+      </nav>
+      </header>
+        {% block content %}{%endblock%}
+    <!-- /#page-content-wrapper -->
+    
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+
+  <!-- Menu Toggle Script -->
+  <script type="text/javascript" src="{{ url_for('static', filename='javascript/script.js')}}"></script>
+  <footer class="footer">
+    <div class="container">
+      <span class="text-muted">Planta Purificadora UPSIN S.A de C.V</span>
+    </div>
+  </footer>
+</body>
+
+</html>

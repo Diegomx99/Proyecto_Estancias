@@ -1,0 +1,886 @@
+{% extends 'layout.html'%} 
+{%block tittle%}Produccion{%endblock%}
+{% block content %}  
+{% with messages = get_flashed_messages() %}
+	{% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-success alert-dismissible fade show" role="alert" id="alert">
+        {{message}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+	  {% endfor %}
+	{% endif %}
+{% endwith %} 
+<!-- Contenido -->
+<div class="container-md" id="content">
+  <div id="cabecera">
+    <span id="line">índice:</span>
+    <span id="tagline">Producción</span>
+  </div>
+  <div class="row">
+    <!-- Card PPA-F001 -->
+    <div class="col-xs-12 col-xl-6">
+      <div class="box">
+        <!-- Icon Image -->
+        <div class="box-icon">
+          <span><img src="{{ url_for('static', filename='img/reportes.jpg')}}" class="reporte"></span>
+        </div>
+        <!-- body -->
+        <div class="info">
+          <h4 class="text-center">PPA-F001</h4>
+          <h5 class="text-center">Cloración de cisterna de agua cruda</h5>
+          <div>    
+            <div class="card bg-primary">
+              <a href="" id="">
+                <div class="card-body text-center" id="btn-modal-F001">
+                Agregar
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>    
+      </div>
+    </div>
+
+    <!--Card PPA-F009-->
+    <div class="col-xs-12  col-xl-6">
+      <div class="box">
+        <!-- Icon Image --> 
+        <div class="box-icon">
+          <span><img src="{{ url_for('static', filename='img/reportes.jpg')}}" class="reporte"></span>
+        </div>
+        <!-- body -->
+        <div class="info">                
+          <h4 class="text-center">PPA-F009</h4>
+          <h5 class="text-center">Merma de botella de plástico</h5>  
+          <div>
+            <div class="card bg-primary">
+              <a href="" id="">
+                <div class="card-body text-center" id="btn-modal-F009">
+                Agregar
+                </div>
+              </a>
+            </div>                      
+          </div>                
+        </div>
+        
+      </div>
+    </div>
+    <!--Card PPA-F0010-->
+    <div class="col-xs-12  col-xl-6">
+      <div class="box">
+        <!-- Icon Image -->
+        <div class="box-icon">
+          <span><img src="{{ url_for('static', filename='img/reportes.jpg')}}" class="reporte"></span>
+        </div>
+        <!-- body -->  
+        <div class="info">
+          <h4 class="text-center">PPA-F010</h4>
+          <h5 class="text-center">Operación ósmosis inversa</h5>    
+          <div>
+            <div class="card bg-primary">
+              <a href="" id="">
+                <div class="card-body text-center" id="btn-modal-F010">
+                Agregar
+                </div>
+              </a>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+
+    <!--Card PPA-F0011-->
+    <div class="col-xs-12  col-xl-6">
+      <div class="box">
+        <!-- Icon Image -->  
+        <div class="box-icon">
+          <span><img src="{{ url_for('static', filename='img/reportes.jpg')}}" class="reporte"></span>
+        </div>
+        <!-- body -->
+        <div class="info">                
+          <h4 class="text-center">PPA-F011</h4>
+          <h5 class="text-center">Operación de equipo generador de ozono</h5>
+
+          <div>
+            <div class="card bg-primary">
+              <a href="" id="">
+                <div class="card-body text-center" id="btn-modal-F011">
+                Agregar
+                </div>
+              </a>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+
+    <!--Card PPA-F0012-->
+    <div class="col-xs-12 col-xl-6">
+      <div class="box">
+        <!-- Icon Image -->
+        <div class="box-icon">
+          <span><img src="{{ url_for('static', filename='img/reportes.jpg')}}" class="reporte"></span>
+        </div>
+        <!-- body -->
+        <div class="info">
+          <h4 class="text-center">PPA-F012</h4>
+          <h5 class="text-center">Operación de lámpara UV</h5>
+          <div>
+            <div class="card bg-primary">
+              <a href="" id="">
+                <div class="card-body text-center" id="btn-modal-F012">
+                Agregar
+                </div>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!--Card PPA-F015-->
+    <div class="col-xs-12  col-xl-6">
+      <div class="box">
+        <!-- Icon Image -->   
+        <div class="box-icon">
+          <span><img src="{{ url_for('static', filename='img/reportes.jpg')}}" class="reporte"></span>
+        </div>
+        <!-- body -->
+        <div class="info">
+          <h4 class="text-center">PPA-F015</h4>
+          <h5 class="text-center">Producción de agua embotellada</h5>
+          <div>
+            <div class="card bg-primary">
+              <a href="" id="">
+                <div class="card-body text-center" id="btn-modal-F015">
+                Agregar
+                </div>
+              </a>
+            </div>       
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <!--Card PPA-F0016-->
+    <div class="col-xs-12  col-xl-6">
+      <div class="box">
+        <!-- Icon Image -->
+        <div class="box-icon">
+          <span><img src="{{ url_for('static', filename='img/reportes.jpg')}}" class="reporte"></span>
+        </div>
+        <!-- body -->
+        <div class="info">
+          <h4 class="text-center">PPA-F016</h4>
+          <h5 class="text-center">Producción de garrafones de agua</h5>
+          <div>
+            <div class="card bg-primary">
+              <a href="" id="">
+                <div class="card-body text-center" id="btn-modal-F016">
+                Agregar
+                </div>
+              </a>
+            </div>
+          </div> 
+          
+        </div>
+      </div>
+    </div>
+
+    <!--Card PPA-F0024-->
+    <div class="col-xs-12  col-xl-6">
+      <div class="box">
+        <!-- Icon Image -->
+        <div class="box-icon">
+          <span><img src="{{ url_for('static', filename='img/reportes.jpg')}}" class="reporte"></span>
+        </div>
+        <!-- body -->
+
+        <div class="info">
+          <h4 class="text-center">PPA-F024</h4>
+          <h5 class="text-center">Buenas prácticas de higiene</h5>
+          <div>
+            <div class="card bg-primary">
+              <a href="" id="">
+                <div class="card-body text-center" id="btn-modal-F024">
+                Agregar
+                </div>
+              </a>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- PPA-F001 -->
+<div class="modal" tabindex="-1" role="dialog" id="PPA-F001" onblur=borrarBitacoras()>
+<div class="modal-dialog" role="document" >
+  <div class="modal-content borde">
+    <div class="modal-header fondo-header">
+      <h5 class="modal-title" style="color: white;">Bitácora F001 - Cloración de cisterna de agua cruda</h5>
+      <button type="button" class="close" style="color: white; opacity: 100; outline: none;" data-dismiss="modal" aria-label="Close" onclick=borrarBitacorasDelBoton()>
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body" id="modal-body">
+      <p>Ingrese la información.</p>
+      <form action="/f001" method="post">
+        <div class="grupo">
+          <label>Fecha:</label>
+          <input class="form-control" type="date" name="Fecha-F001" id="Fecha-F001" required>
+        </div>
+
+        <div class="grupo">
+          <label>Hora:</label>
+          <input class="form-control" type="time" name="Hora-F001" id="Hora-F001" required>
+        </div>
+
+        <div class="grupo">
+          <input type="number" name="Cantidad-F001" id="Cantidad-F001" required class="input-text"><span class="barra"></span>
+          <label class="label-text">Cantidad</label>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" id="btn-registrar-F001" class="btn btn-primary submit" disabled>Guardar</button>
+          <button type="button" id="btn-cerrar-F001" class="btn btn-secondary" data-dismiss="modal" onclick=borrarBitacorasDelBoton()>Cerrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- PPA-F009 -->
+<div class="modal" tabindex="-1" role="dialog" id="PPA-F009" onblur=borrarBitacoras()>
+<div class="modal-dialog" role="document" >
+  <div class="modal-content borde">
+    <div class="modal-header fondo-header">
+      <h5 class="modal-title" style="color: white;">Bitácora F009 - Merma de botella de plástico</h5>
+      <button type="button" class="close" style="color: white; opacity: 100; outline: none;" data-dismiss="modal" aria-label="Close" onclick=borrarBitacorasDelBoton()>
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body" id="modal-body">
+      <p>Ingrese la información.</p>
+      <form action="/f009" method="post">
+
+      <div class="grupo">
+        <label>Fecha:</label>
+        <input class="form-control" type="date" name="Fecha-F009" id="Fecha-F009" required>
+      </div>
+
+      <div class="grupo">
+        <input type="number" name="Lote-F009" id="Lote-F009" required class="input-text"><span class="barra"></span>
+        <label class="label-text">Lote</label>
+      </div>
+
+      <div class="grupo">
+        <input type="number" name="Unidades-verificadas-F009" id="Unidades-verificadas-F009" required class="input-text"><span class="barra"></span>
+        <label class="label-text">Unidades verificadas</label>
+      </div>
+
+      <div class="grupo">
+        <input type="number" name="Unidades-no-conformes-F009" id="Unidades-no-conformes-F009" required class="input-text"><span class="barra"></span>
+        <label class="label-text">Unidades no conformes</label>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" id="btn-registrar-F009" class="btn btn-primary submit" disabled>Guardar</button>
+        <button type="button" id="btn-cerrar-F009" class="btn btn-secondary" data-dismiss="modal" onclick=borrarBitacorasDelBoton()>Cerrar</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- PPA-F010 -->
+<div class="modal" tabindex="-1" role="dialog" id="PPA-F010" onblur=borrarBitacoras()>
+<div class="modal-dialog" role="document" >
+  <div class="modal-content borde">
+    <div class="modal-header fondo-header">
+      <h5 class="modal-title" style="color: white;">Bitácora F010 - Operación ósmosis inversa</h5>
+      <button type="button" class="close" style="color: white; opacity: 100; outline: none;" data-dismiss="modal" aria-label="Close" onclick=borrarBitacorasDelBoton()>
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body" id="modal-body">
+      <p>Ingrese la información.</p>
+      <form action="/f010" method="post">
+        <div class="grupo">
+          <label>Fecha:</label>
+          <input class="form-control" type="date" name="Fecha-F010" id="Fecha-F010" required>
+        </div>
+        <div class="grupo">
+          <table class="table table-check table-responsive-sm">
+            <tbody>
+                <tr>
+                  <td class="table-check-td" colspan="2">Hora</td>
+                </tr>
+                <tr>
+                  <td>Encendido</td>
+                  <td>Apagado</td>
+                </tr>
+                <tr>
+                  <td><input class="form-control" type="time" name="Encendido-F010" id="Encendido-F010" required></td>
+                  <td><input class="form-control" type="time" name="Apagado-F010" id="Apagado-F010" required></td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="grupo">
+          <table class="table table-check table-responsive-sm">
+            <tbody>
+                <tr>
+                  <td class="table-check-td" colspan="2">SD</td>
+                </tr>
+                <tr>
+                  <td>In</td>
+                  <td>Out</td>
+                </tr>
+                <tr>
+                  <td><input type="number" name="In-F010" id="In-F010" required class="input-text"><span class="barra"></span></td>
+                  <td><input type="number" name="Out-F010" id="Out-F010" required class="input-text"><span class="barra"></span></td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" id="btn-registrar-F010" class="btn btn-primary submit" disabled>Guardar</button>
+          <button type="button" id="btn-cerrar-F010" class="btn btn-secondary" data-dismiss="modal" onclick=borrarBitacorasDelBoton()>Cerrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- PPA-F011 -->
+<div class="modal" tabindex="-1" role="dialog" id="PPA-F011" onblur=borrarBitacoras()>
+<div class="modal-dialog" role="document" >
+  <div class="modal-content borde">
+    <div class="modal-header fondo-header">
+      <h5 class="modal-title" style="color: white;">Bitácora F011 - Operación de equipo generador de ozono</h5>
+      <button type="button" class="close" style="color: white; opacity: 100; outline: none;" data-dismiss="modal" aria-label="Close" onclick=borrarBitacorasDelBoton()>
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body" id="modal-body">
+      <p>Ingrese la información.</p>
+      <form action="/f011" method="post">
+        <div class="grupo">
+          <label>Fecha:</label>
+          <input class="form-control" type="date" name="Fecha-F011" id="Fecha-F011" required>
+        </div>
+        <div class="grupo">
+          <table class="table table-check table-responsive-sm">
+            <tbody>
+                <tr>
+                  <td class="table-check-td" colspan="2">Hora</td>
+                </tr>
+                <tr>
+                  <td>Encendido</td>
+                  <td>Apagado</td>
+                </tr>
+                <tr>
+                  <td><input class="form-control" type="time" name="Encendido-F011" id="Encendido-F011" required></td>
+                  <td><input class="form-control" type="time" name="Apagado-F011" id="Apagado-F011" required></td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" id="btn-registrar-F011" class="btn btn-primary submit" disabled>Guardar</button>
+          <button type="button" id="btn-cerrar-F011" class="btn btn-secondary" data-dismiss="modal" onclick=borrarBitacorasDelBoton()>Cerrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- PPA-F012 -->
+<div class="modal" tabindex="-1" role="dialog" id="PPA-F012" onblur=borrarBitacoras()>
+<div class="modal-dialog" role="document" >
+  <div class="modal-content borde">
+    <div class="modal-header fondo-header">
+      <h5 class="modal-title" style="color: white;">Bitácora F012 - Operación de lámpara UV</h5>
+      <button type="button" class="close" style="color: white; opacity: 100; outline: none;" data-dismiss="modal" aria-label="Close" onclick=borrarBitacorasDelBoton()>
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body" id="modal-body">
+      <p>Ingrese la información.</p>
+      <form action="/f012" method="post">
+        <div class="grupo">
+          <label>Fecha:</label>
+          <input class="form-control" type="date" name="Fecha-F012" id="Fecha-F012" required>
+        </div>
+        <div class="grupo">
+          <table class="table table-check table-responsive-sm">
+            <tbody>
+                <tr>
+                  <td class="table-check-td" colspan="2">Hora</td>
+                </tr>
+                <tr>
+                  <td>Encendido</td>
+                  <td>Apagado</td>
+                </tr>
+                <tr>
+                  <td><input class="form-control" type="time" name="Encendido-F012" id="Encendido-F012" required></td>
+                  <td><input class="form-control" type="time" name="Apagado-F012" id="Apagado-F012" required></td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" id="btn-registrar-F012" class="btn btn-primary submit" disabled>Guardar</button>
+          <button type="button" id="btn-cerrar-F012" class="btn btn-secondary" data-dismiss="modal" onclick=borrarBitacorasDelBoton()>Cerrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- PPA-F015 -->
+<div class="modal" tabindex="-1" role="dialog" id="PPA-F015" onblur=borrarBitacoras()>
+<div class="modal-dialog" role="document" >
+  <div class="modal-content borde">
+    <div class="modal-header fondo-header">
+      <h5 class="modal-title" style="color: white;">Bitácora F015 - Producción de agua embotellada</h5>
+      <button type="button" class="close" style="color: white; opacity: 100; outline: none;" data-dismiss="modal" aria-label="Close" onclick=borrarBitacorasDelBoton()>
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body" id="modal-body">
+      <p>Ingrese la información.</p>
+      <form action="/f015" method="POST">
+        <div class="grupo">
+          <label>Fecha:</label>
+          <input class="form-control" type="date" name="Fecha-F015" id="Fecha-F015" required>
+        </div>
+
+        <div class="grupo">
+          <table class="table table-check table-responsive-sm">
+            <tbody>
+                <tr>
+                  <td class="table-check-td" colspan="2">Hora</td>
+                </tr>
+                <tr>
+                  <td>Inicio</td>
+                  <td>Final</td>
+                </tr>
+                <tr>
+                  <td><input class="form-control" type="time" name="Inicio-F015" id="Inicio-F015" required></td>
+                  <td><input class="form-control" type="time" name="Final-F015" id="Final-F015" required></td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="grupo">
+          <input type="number" name="Cantidad-F015" id="Cantidad-F015" required class="input-text"><span class="barra"></span>
+          <label class="label-text">Cantidad</label>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" id="btn-registrar-F015" class="btn btn-primary submit" disabled>Guardar</button>
+          <button type="button" id="btn-cerrar-F015" class="btn btn-secondary" data-dismiss="modal" onclick=borrarBitacorasDelBoton()>Cerrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- PPA-F016 -->
+<div class="modal" tabindex="-1" role="dialog" id="PPA-F016" onblur=borrarBitacoras()>
+<div class="modal-dialog" role="document" >
+  <div class="modal-content borde">
+    <div class="modal-header fondo-header">
+      <h5 class="modal-title" style="color: white;">Bitácora F016 - Producción de garrafones de agua</h5>
+      <button type="button" class="close" style="color: white; opacity: 100; outline: none;" data-dismiss="modal" aria-label="Close" onclick=borrarBitacorasDelBoton()>
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body" id="modal-body">
+      <p>Ingrese la información.</p>
+      <form action="/f016" method="POST">
+        <div class="grupo">
+          <label >Fecha:</label>
+          <input class="form-control" type="date" name="Fecha-F016" id="Fecha-F016" required>
+        </div>
+
+        <div class="grupo">
+          <table class="table table-check table-responsive-sm">
+            <tbody>
+                <tr>
+                  <td class="table-check-td" colspan="2">Hora</td>
+                </tr>
+                <tr>
+                  <td>Inicio</td>
+                  <td>Final</td>
+                </tr>
+                <tr>
+                  <td><input class="form-control" type="time" name="Inicio-F016" id="Inicio-F016" required></td>
+                  <td><input class="form-control" type="time" name="Final-F016" id="Final-F016" required></td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="grupo">
+          <input type="number" name="Cantidad-F016" id="Cantidad-F016" required class="input-text"><span class="barra"></span>
+          <label class="label-text">Cantidad</label>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" id="btn-registrar-F016" class="btn btn-primary submit" disabled>Guardar</button>
+          <button type="button" id="btn-cerrar-F016" class="btn btn-secondary" data-dismiss="modal" onclick=borrarBitacorasDelBoton()>Cerrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- PPA-F024 -->
+<div class="modal" tabindex="-1" role="dialog" id="PPA-F024" onblur=borrarBitacoras()>
+<div class="modal-dialog modal-margin" role="document" >
+  <div class="modal-content borde">
+    <div class="modal-header fondo-header">
+      <h5 class="modal-title" style="color: white;">Bitácora F024 - Buenas prácticas de higiene</h5>
+      <button type="button" class="close" style="color: white; opacity: 100; outline: none;" data-dismiss="modal" aria-label="Close" onclick=borrarBitacorasDelBoton()>
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body" id="modal-body">
+      <p>Ingrese la información.</p>
+      <form action="/f024" method="POST">
+        <div class="grupo">
+          <label>Fecha:</label>
+          <input class="form-control" type="date" name="Fecha-F024" id="Fecha-F024" required>
+        </div>
+
+        <div>
+
+          <div class="grupo-quest">
+            <input type="text"  required class="input-question" readonly><span class="barra"></span>
+            <label class="label-text-quest">1.El área de trabajo, ¿se encuentra libre de ventilación?</label>
+          </div>
+
+          <div class="grupo">
+            <table class="table table-check  table-check-t table-responsive-sm">
+              <tbody>
+                  <tr>
+                    <th class="table-check-td" scope="col">Porcentaje de cumplimiento (%)</th>
+                    <th class="table-check-td" scope="col">No. de revisiones</th>
+                  </tr>
+  
+                  <tr>
+                    <td class="table-check-t" scope="row"><input type="number" name="percent-1" required class="input-text" id="percent-1" onkeyup=promediar()><span class="barra"></span></td>
+                    <td class="table-check-t" scope="row"><input type="number" name="revision-1" required class="input-text" id="revision-1" onkeyup=sumaRevisiones()><span class="barra"></span></td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+          
+        </div>
+
+        <div>
+
+          <div class="grupo-quest">
+            <input type="text" required class="input-question" readonly><span class="barra"></span>
+            <label class="label-text-quest">2.El personal, ¿cuenta con las vestimenta y el calzado adecuado?</label>
+          </div>
+
+          <div class="grupo">
+            <table class="table table-check  table-check-t table-responsive-sm">
+              <tbody>
+                  <tr>
+                    <th class="table-check-td" scope="col">Porcentaje de cumplimiento (%)</th>
+                    <th class="table-check-td" scope="col">No. de revisiones</th>
+                  </tr>
+  
+                  <tr>
+                    <td class="table-check-t" scope="row"><input type="number"  name="percent-2" required class="input-text" id="percent-2" onkeyup=promediar()><span class="barra"></span></td>
+                    <td class="table-check-t" scope="row"><input type="number" name="revision-2" required class="input-text" id="revision-2" onkeyup=sumaRevisiones()><span class="barra"></span></td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+        <div>
+
+          <div class="grupo-quest">
+            <input type="text" required class="input-question" readonly><span class="barra"></span>
+            <label class="label-text-quest">3.El personal, ¿utiliza cofia y cubrebocas correctamente?</label>
+          </div>
+
+          <div class="grupo">
+            <table class="table table-check  table-check-t table-responsive-sm">
+              <tbody>
+                  <tr>
+                    <th class="table-check-td" scope="col">Porcentaje de cumplimiento (%)</th>
+                    <th class="table-check-td" scope="col">No. de revisiones</th>
+                  </tr>
+  
+                  <tr>
+                    <td class="table-check-t" scope="row"><input type="number"  name="percent-3" required class="input-text" id="percent-3" onkeyup=promediar()><span class="barra"></span></td>
+                    <td class="table-check-t" scope="row"><input type="number"  name="revision-3" required class="input-text" id="revision-3" onkeyup=sumaRevisiones()><span class="barra"></span></td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+        <div>
+
+          <div class="grupo-quest">
+            <input type="text" required class="input-question" readonly><span class="barra"></span>
+            <label class="label-text-quest">4.El personal, ¿se encuentra libre de objetos personales, joyería, cartera, etc?</label>
+          </div>
+
+          <div class="grupo">
+            <table class="table table-check  table-check-t table-responsive-sm">
+              <tbody>
+                  <tr>
+                    <th class="table-check-td" scope="col">Porcentaje de cumplimiento (%)</th>
+                    <th class="table-check-td" scope="col">No. de revisiones</th>
+                  </tr>
+  
+                  <tr>
+                    <td class="table-check-t" scope="row"><input type="number" name="percent-4" required class="input-text" id="percent-4" onkeyup=promediar()><span class="barra"></span></td>
+                    <td class="table-check-t" scope="row"><input type="number" name="revision-4" required class="input-text" id="revision-4" onkeyup=sumaRevisiones()><span class="barra"></span></td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+        <div>
+
+          <div class="grupo-quest">
+            <input type="text" required class="input-question" readonly><span class="barra"></span>
+            <label class="label-text-quest">5.El personal, ¿evita el uso de celular en las áreas de proceso?</label>
+          </div>
+
+          <div class="grupo">
+            <table class="table table-check  table-check-t table-responsive-sm">
+              <tbody>
+                  <tr>
+                    <th class="table-check-td" scope="col">Porcentaje de cumplimiento (%)</th>
+                    <th class="table-check-td" scope="col">No. de revisiones</th>
+                  </tr>
+  
+                  <tr>
+                    <td class="table-check-t" scope="row"><input type="number"  name="percent-5" required class="input-text" id="percent-5" onkeyup=promediar()><span class="barra"></span></td>
+                    <td class="table-check-t" scope="row"><input type="number"  name="revision-5" required class="input-text" id="revision-5" onkeyup=sumaRevisiones()><span class="barra"></span></td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+        <div>
+
+          <div class="grupo-quest">
+            <input type="text" required class="input-question" readonly><span class="barra"></span>
+            <label class="label-text-quest">6.El personal, ¿evita traer uñas largas y sucias?</label>
+          </div>
+
+          <div class="grupo">
+            <table class="table table-check  table-check-t table-responsive-sm">
+              <tbody>
+                  <tr>
+                    <th class="table-check-td" scope="col">Porcentaje de cumplimiento (%)</th>
+                    <th class="table-check-td" scope="col">No. de revisiones</th>
+                  </tr>
+  
+                  <tr>
+                    <td class="table-check-t" scope="row"><input type="number" name="percent-6" required class="input-text" id="percent-6" onkeyup=promediar()><span class="barra"></span></td>
+                    <td class="table-check-t" scope="row"><input type="number" name="revision-6" required class="input-text" id="revision-6" onkeyup=sumaRevisiones()><span class="barra"></span></td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+        <div>
+
+          <div class="grupo-quest">
+            <input type="text" required class="input-question" readonly><span class="barra"></span>
+            <label class="label-text-quest">7.El personal, ¿se lava las manos adecuada y regularmente?</label>
+          </div>
+
+          <div class="grupo">
+            <table class="table table-check  table-check-t table-responsive-sm">
+              <tbody>
+                  <tr>
+                    <th class="table-check-td" scope="col">Porcentaje de cumplimiento (%)</th>
+                    <th class="table-check-td" scope="col">No. de revisiones</th>
+                  </tr>
+  
+                  <tr>
+                    <td class="table-check-t" scope="row"><input type="number" name="percent-7" required class="input-text" id="percent-7" onkeyup=promediar()><span class="barra"></span></td>
+                    <td class="table-check-t" scope="row"><input type="number"  name="revision-7" required class="input-text" id="revision-7" onkeyup=sumaRevisiones()><span class="barra"></span></td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+        <div>
+
+          <div class="grupo-l">
+            <input type="text" required class="input-question" readonly><span class="barra"></span>
+            <label class="label-text-quest-l">8.Si el personal tiene heridas, ¿las mantiene protegidas debidamente para evitar contaminación?</label>
+          </div>
+
+          <div class="grupo">
+            <table class="table table-check  table-check-t table-responsive-sm">
+              <tbody>
+                  <tr>
+                    <th class="table-check-td" scope="col">Porcentaje de cumplimiento (%)</th>
+                    <th class="table-check-td" scope="col">No. de revisiones</th>
+                  </tr>
+  
+                  <tr>
+                    <td class="table-check-t" scope="row"><input type="number" name="percent-8" required class="input-text" id="percent-8" onkeyup=promediar()><span class="barra"></span></td>
+                    <td class="table-check-t" scope="row"><input type="number" name="revision-8" required class="input-text" id="revision-8" onkeyup=sumaRevisiones()><span class="barra"></span></td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+        <div>
+
+          <div class="grupo-l">
+            <input type="text" required class="input-question" readonly><span class="barra"></span>
+            <label class="label-text-quest-l">9.El personal, ¿se excluye de labores que implican contacto directo si presenta cualquier cuadro infeccioso?</label>
+          </div>
+
+          <div class="grupo">
+            <table class="table table-check  table-check-t table-responsive-sm">
+              <tbody>
+                  <tr>
+                    <th class="table-check-td" scope="col">Porcentaje de cumplimiento (%)</th>
+                    <th class="table-check-td" scope="col">No. de revisiones</th>
+                  </tr>
+  
+                  <tr>
+                    <td class="table-check-t" scope="row"><input type="number" name="percent-9" required class="input-text" id="percent-9" onkeyup=promediar()><span class="barra"></span></td>
+                    <td class="table-check-t" scope="row"><input type="number" name="revision-9" required class="input-text" id="revision-9" onkeyup=sumaRevisiones()><span class="barra"></span></td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+        <div>
+
+          <div class="grupo-l">
+            <input type="text" required class="input-question" readonly><span class="barra"></span>
+            <label class="label-text-quest-l">10.El personal, ¿evita escupir, mascar o consumir cualquier tipo de alimentos o bebidas?</label>
+          </div>
+
+          <div class="grupo">
+            <table class="table table-check  table-check-t table-responsive-sm">
+              <tbody>
+                  <tr>
+                    <th class="table-check-td" scope="col">Porcentaje de cumplimiento (%)</th>
+                    <th class="table-check-td" scope="col">No. de revisiones</th>
+                  </tr>
+  
+                  <tr>
+                    <td class="table-check-t" scope="row"><input type="number" name="percent-10" required class="input-text" id="percent-10" onkeyup=promediar()><span class="barra"></span></td>
+                    <td class="table-check-t" scope="row"><input type="number" name="revision-10" required class="input-text" id="revision-10" onkeyup=sumaRevisiones()><span class="barra"></span></td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+        <div>
+
+          <div class="grupo-quest">
+            <input type="text" required class="input-question" readonly><span class="barra"></span>
+            <label class="label-text-quest">11.¿Se mantienen limpias las herramientas y área de trabajo?</label>
+          </div>
+
+          <div class="grupo">
+            <table class="table table-check  table-check-t table-responsive-sm">
+              <tbody>
+                  <tr>
+                    <th class="table-check-td" scope="col">Porcentaje de cumplimiento (%)</th>
+                    <th class="table-check-td" scope="col">No. de revisiones</th>
+                  </tr>
+  
+                  <tr>
+                    <td class="table-check-t" scope="row"><input type="number" name="percent-11" required class="input-text" id="percent-11" onkeyup=promediar()><span class="barra"></span></td>
+                    <td class="table-check-t" scope="row"><input type="number" name="revision-11" required class="input-text" id="revision-11" onkeyup=sumaRevisiones()><span class="barra"></span></td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+        <div class="grupo">
+          <div class="d-flex justify-content-center">
+            <label>Promedio de cumplimiento (%)</label>
+          </div>
+  
+          <div>
+            <input type="number"  name="Promedio-F024" required class="input-text text-center" id="Promedio-F024" readonly="readonly"><span class="barra"></span>
+          </div>
+        </div>
+
+        <div class="grupo">
+          <div class="d-flex justify-content-center">
+            <label>Revisiones totales</label>
+          </div>
+  
+          <div>
+            <input type="number"  name="Revisiones-F024" required class="input-text text-center" id="Revisiones-F024" readonly="readonly" ><span class="barra"></span>
+          </div>
+        </div>
+        
+
+        <div class="grupo">
+          <textarea class="input-textarea" name="Acciones-correctivas-F024" id="Acciones-correctivas-F024" cols="30" rows="5" required></textarea><span class="barra"></span>
+          <label class="label-textarea">Acciones correctivas</label>
+        </div>
+
+        <div class="modal-footer">
+          <button type="submit" id="btn-registrar-F024" class="btn btn-primary submit" disabled>Guardar</button>
+          <button type="button" id="btn-cerrar-F024" class="btn btn-secondary" data-dismiss="modal" onclick=borrarBitacorasDelBoton()>Cerrar</button>
+        </div>
+      </form>
+    
+    </div>
+  </div>
+</div>
+</div>
+
+    <!-- /#page-content-wrapper -->
+
+{%endblock%}

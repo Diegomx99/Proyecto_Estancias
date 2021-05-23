@@ -1,0 +1,589 @@
+{% extends 'layout.html'%} 
+{%block tittle%}Fisicoquímicos{%endblock%}
+{% block content %}
+{% with messages = get_flashed_messages() %}
+	{% if messages %}
+	{% for message in messages %}
+	<div class="alert alert-success alert-dismissible fade show" role="alert">
+		{{message}}
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		  <span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	{% endfor %}
+	{% endif %}
+	{% endwith %}
+<div class="container-md" id="content">
+  <div id="cabecera">
+    <span id="line">índice:</span>
+    <span id="tagline">Fisicoquímicos</span>
+  </div>
+  <div class="row">
+      <!-- Card PPA–F005 -->
+      <div class="col-xs-12 col-xl-6">
+        <div class="box">
+            <!-- Icon Image -->
+            <div class="box-icon">
+              <span><img src="{{ url_for('static', filename='img/reportes.jpg')}}" class="reporte"></span>
+            </div>
+            <!-- body -->
+            <div class="info">
+              <h4 class="text-center">PPA–F005</h4>
+              <h5 class="text-center">Medición de coloro libre residual en agua producto</h5>
+              <div class="card bg-primary">
+                <a href="" id="" data-toggle="modal" data-target="#PPA–F005">
+                  <div class="card-body text-center">
+                  Agregar
+                  </div>
+                </a>
+              </div>
+            </div>
+        </div>
+      </div>
+      <!-- Card PPA–F006 -->
+      <div class="col-xs-12 col-xl-6">
+        <div class="box">
+            <!-- Icon Image -->
+            <div class="box-icon">
+              <span><img src="{{ url_for('static', filename='img/reportes.jpg')}}" class="reporte"></span>
+            </div>
+            <!-- body -->
+            <div class="info">
+              <h4 class="text-center">PPA–F006</h4>
+              <h5 class="text-center">Medición de cloro libre residual en cisterna (agua cruda)</h5>
+              <div class="card bg-primary">
+                <a href="" id="" data-toggle="modal" data-target="#PPA–F006">
+                  <div class="card-body text-center">
+                  Agregar
+                  </div>
+                </a>
+              </div>
+            </div>
+        </div>
+      </div>
+      <!-- Card PPA–F007 -->
+      <div class="col-xs-12 col-xl-6">
+        <div class="box">
+            <!-- Icon Image -->
+            <div class="box-icon">
+              <span><img src="{{ url_for('static', filename='img/reportes.jpg')}}" class="reporte"></span>
+            </div>
+            <!-- body -->
+            <div class="info">
+              <h4 class="text-center">PPA–F007</h4>
+              <h5 class="text-center">Medición de dureza en agua producto</h5>
+              <div class="card bg-primary">
+                <a href="" id="" data-toggle="modal" data-target="#PPA–F007"> 
+                  <div class="card-body text-center">
+                  Agregar
+                  </div>
+                </a>
+              </div>
+            </div>
+        </div>
+      </div>
+      <!-- Card PPA – F008  -->
+      <div class="col-xs-12 col-xl-6">
+        <div class="box">
+            <!-- Icon Image -->
+            <div class="box-icon">
+              <span><img src="{{ url_for('static', filename='img/reportes.jpg')}}" class="reporte"></span>
+            </div>
+            <!-- body -->
+            <div class="info">
+              <h4 class="text-center">PPA–F008</h4>
+              <h5 class="text-center">Medición de PH en agua producto</h5>
+              <div class="card bg-primary">
+                <a href=""  data-toggle="modal" data-target="#PPA–F008"> 
+                  <div class="card-body text-center">
+                    Agregar
+                  </div>
+                </a>
+              </div>
+            </div>
+        </div>
+      </div>
+      <!-- Card PPA – F013  -->
+      <div class="col-xs-12 col-xl-6">
+        <div class="box">
+            <!-- Icon Image -->
+            <div class="box-icon">
+              <span><img src="{{ url_for('static', filename='img/reportes.jpg')}}" class="reporte"></span>
+            </div>
+            <!-- body -->
+            <div class="info">
+              <h4 class="text-center">PPA–F013</h4>
+              <h5 class="text-center">Percepción de agua en dispensador</h5>
+              <div class="card bg-primary">
+                <a href="" id="" data-toggle="modal" data-target="#PPA–F013">
+                  <div class="card-body text-center">
+                  Agregar
+                  </div>
+                </a>  
+              </div>
+            </div>
+        </div>
+      </div>
+      <!-- Card PPA – F014  -->
+      <div class="col-xs-12 col-xl-6">
+        <div class="box">
+            <!-- Icon Image -->
+            <div class="box-icon">
+              <span><img src="{{ url_for('static', filename='img/reportes.jpg')}}" class="reporte"></span>
+            </div>
+            <!-- body -->
+            <div class="info">
+              <h4 class="text-center">PPA–F014</h4>
+              <h5 class="text-center">Percepción de agua producto</h5>
+              <div class="card bg-primary">
+                <a href="" id="" data-toggle="modal" data-target="#PPA–F014">
+                  <div class="card-body text-center">
+                  Agregar
+                  </div>
+                </a>
+              </div>
+            </div>
+        </div>
+      </div>
+      <!-- Card PPA – F028  -->
+      <div class="col-xs-12 col-xl-6">
+        <div class="box">
+            <!-- Icon Image -->
+            <div class="box-icon">
+              <span><img src="{{ url_for('static', filename='img/reportes.jpg')}}" class="reporte"></span>
+            </div>
+            <!-- body -->
+            <div class="info">
+              <h4 class="text-center">PPA–F028</h4>
+              <h5 class="text-center">Fisicoquímicos de agua de la red y filtros</h5>
+              <div class="card bg-primary">
+                <a href="" id="" data-toggle="modal" data-target="#PPA–F028">
+                  <div class="card-body text-center">
+                  Agregar
+                  </div>
+                </a>
+              </div>
+            </div>
+        </div>
+      </div>
+      <!-- Card PPA – F029  -->
+      <div class="col-xs-12 col-xl-6">
+        <div class="box">
+            <!-- Icon Image -->
+            <div class="box-icon">
+              <span><img src="{{ url_for('static', filename='img/reportes.jpg')}}" class="reporte"></span>
+            </div>
+            <!-- body -->
+            <div class="info">
+              <h4 class="text-center">PPA–F029</h4>
+              <h5 class="text-center">Fisicoquímicos de agua producto</h5>
+              <div class="card bg-primary">
+                <a href="" id="" data-toggle="modal" data-target="#PPA–F029">
+                  <div class="card-body text-center">
+                  Agregar
+                  </div>
+                </a>
+              </div>
+            </div>
+        </div>
+      </div>
+      <!-- END OF CONTENT -->
+  </div>
+</div>
+<!-- Modals -->
+
+<!-- Modal PPA–F005 -->
+<div class="modal" tabindex="-1" role="dialog" id="PPA–F005" onblur=borrarBitacoras()>
+  <div class="modal-dialog" role="document" >
+    <div class="modal-content borde">
+      <div class="modal-header fondo-header">
+        <h5 class="modal-title" style="color: white;">Bitácora PPA–F005 - Medición de coloro libre residual en agua producto</h5>
+        <button type="button" class="close" style="color: white; opacity: 100; outline: none;" data-dismiss="modal" aria-label="Close" onclick=borrarBitacorasDelBoton()>
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <p>Ingrese la información. </p>
+        <form action="/f005" method="POST">
+          <div class="grupo">
+            <label>Fecha</label>
+            <input class="form-control" type="date" value="" id="Fecha-PPA-F005" name="Fecha-PPA-F005">
+          </div>
+          <div class="grupo">
+            <label>Hora</label>
+            <input class="form-control" type="time" value="" id="Hora-PPA-F005" name="Hora-PPA-F005">
+          </div>
+          <div class="grupo">
+            <input type="number" name="Cl-PPA-F005" id="Cl-PPA-F005" required class="input-text"><span class="barra"></span>
+            <label class="label-text">Cl (mg/L)</label>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" id="btn-registrar-F005" class="btn btn-primary submit" disabled >Guardar</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick=borrarBitacorasDelBoton()>Cerrar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal PPA–F006 -->
+<div class="modal" tabindex="-1" role="dialog" id="PPA–F006" onblur=borrarBitacoras()>
+  <div class="modal-dialog" role="document" >
+    <div class="modal-content borde">
+      <div class="modal-header fondo-header">
+        <h5 class="modal-title" style="color: white;">Bitácora PPA–F006 - Medición de cloro libre residual en cisterna (agua cruda)</h5>
+        <button type="button" class="close" style="color: white; opacity: 100; outline: none;" data-dismiss="modal" aria-label="Close" onclick=borrarBitacorasDelBoton()>
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <p>Ingrese la información.</p>
+        <form action="/f006" method="post">
+          <div class="grupo">
+            <label>Fecha</label>
+            <input class="form-control" type="date" value="" id="Fecha-PPA–F006" name="Fecha-PPA–F006">
+          </div>
+          <div class="grupo">
+            <label>Hora</label>
+            <input class="form-control" type="time" value="" id="Hora-PPA–F006" name="Hora-PPA–F006">
+          </div>
+          <div class="grupo">
+            <input type="number" name="Cl-PPA–F006" id="Cl-PPA–F006" required class="input-text"><span class="barra"></span>
+            <label class="label-text">Cl (mg/L)</label>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" id="btn-registrar-F006" class="btn btn-primary submit" disabled>Guardar</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick=borrarBitacorasDelBoton()>Cerrar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal PPA–F007 -->
+<div class="modal" tabindex="-1" role="dialog" id="PPA–F007" onblur=borrarBitacoras()>
+    <div class="modal-dialog" role="document">
+      <div class="modal-content borde">
+        <div class="modal-header fondo-header">
+          <h5 class="modal-title" style="color: white;">Bitácora PPA–F007 - Medición de dureza en agua producto</h5>
+          <button type="button" class="close" style="color: white; opacity: 100; outline: none;" data-dismiss="modal" aria-label="Close" onclick=borrarBitacorasDelBoton()>
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="modal-body">
+          <p>Ingrese la información.</p>
+          <form action="/f007" method="post">
+            <div class="grupo">
+              <label>Fecha</label>
+              <input class="form-control" type="date" value="" id="Fecha-PPA–F007" name="Fecha-PPA–F007">
+            </div>
+            <div class="grupo">
+              <label>Hora</label>
+              <input class="form-control" type="time" value="" id="Hora-PPA–F007" name="Hora-PPA–F007">
+            </div>
+            <div class="grupo">
+              <input type="number" name="Gotas-PPA–F007" id="Gotas-PPA–F007" required class="input-text"><span class="barra"></span>
+              <label class="label-text">Gotas</label>
+            </div>
+            <div class="grupo">
+              <input type="number" name="ml-PPA–F007" id="ml-PPA–F007" required class="input-text"><span class="barra"></span>
+              <label class="label-text">ml</label>
+            </div>
+
+            <div class="grupo">
+              <input type="number" name="ppm-PPA–F007" id="ppm-PPA–F007" required class="input-text"><span class="barra"></span>
+              <label class="label-text">ppm</label>
+            </div>
+            <p>
+              NOTA: Para la conversión de ppm, si se utiliza el KIT de gotas, cada gota se deberá multiplicar por
+              50 ppm, en el caso de utilizar titulación con jeringa los ml gastados deberán multiplicarse por 300
+              ppm.
+            </p>
+            <div class="modal-footer">
+              <button type="submit" id="btn-registrar-F007" class="btn btn-primary submit" disabled>Guardar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick=borrarBitacorasDelBoton()>Cerrar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+<!-- Modal PPA–F008 -->
+<div class="modal" tabindex="-1" role="dialog" id="PPA–F008" onblur=borrarBitacoras()>
+  <div class="modal-dialog" role="document" >
+    <div class="modal-content borde">
+      <div class="modal-header fondo-header">
+        <h5 class="modal-title" style="color: white;">Bitácora PPA–F008 - Medición de PH en agua producto</h5>
+        <button type="button" class="close" style="color: white; opacity: 100; outline: none;" data-dismiss="modal" aria-label="Close" onclick=borrarBitacorasDelBoton()>
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <p>Ingrese la información.</p>
+        <form action="/f008" method="post">
+          <div class="grupo">
+            <label>Fecha</label>
+            <input class="form-control" type="date" value="" id="Fecha-PPA–F008" name="Fecha-PPA–F008">
+          </div>
+          <div class="grupo">
+            <label>Hora</label>
+            <input class="form-control" type="time" value="" id="Hora-PPA–F008" name="Hora-PPA–F008">
+          </div>
+          <div class="grupo">
+            <input type="number" name="pH-M1-PPA–F008" id="pH-M1-PPA–F008" required class="input-text"><span class="barra"></span>
+            <label class="label-text">pH M1</label>
+          </div>
+          <div class="grupo">
+            <input type="number" name="pH-M2-PPA–F008" id="pH-M2-PPA–F008" required class="input-text"><span class="barra"></span>
+            <label class="label-text">pH M2</label>
+          </div>
+          <p>
+            <b>Notas:</b>
+            <br>
+            <b>pH1</b> corresponde a las unidades obtenidas de la medición de pH con KIT de goteo con rojo de fenol.
+            <b>pH2</b> corresponde a las unidades obtenidas de la medición de pH con equipo multiparámetro.
+          </p>
+          <div class="modal-footer">
+            <button type="submit" id="btn-registrar-F008" class="btn btn-primary submit" disabled>Guardar</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick=borrarBitacorasDelBoton()>Cerrar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal PPA–F013 -->
+<div class="modal" tabindex="-1" role="dialog" id="PPA–F013" onblur=borrarBitacoras()>
+<div class="modal-dialog" role="document" >
+  <div class="modal-content borde">
+    <div class="modal-header fondo-header">
+      <h5 class="modal-title" style="color: white;">Bitácora PPA–F013 - Percepción de agua en dispensador</h5>
+      <button type="button" class="close" style="color: white; opacity: 100; outline: none;" data-dismiss="modal" aria-label="Close" onclick=borrarBitacorasDelBoton()>
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body" id="modal-body">
+      <p>Ingrese la información.</p>
+      <form action="/f013" method="post">
+        <div class="grupo">
+          <label>Fecha</label>
+          <input class="form-control" type="date" value="" id="Fecha-PPA–F013" name="Fecha-PPA–F013">
+        </div>
+        <div class="grupo">
+          <label>Hora</label>
+          <input class="form-control" type="time" value="" id="Hora-PPA–F013" name="Hora-PPA–F013">
+        </div>
+        <div class="grupo">
+          <input type="text" name="Dispensador-PPA–F013" id="Dispensador-PPA–F013" required class="input-text"><span class="barra"></span>
+          <label class="label-text">Dispensador</label>
+        </div>
+        <div class="grupo">
+          <input type="number" name="Saturacion-PPA–F013" id="Saturacion-PPA–F013" required class="input-text"><span class="barra"></span>
+          <label class="label-text">Saturación</label>
+        </div>
+        <div class="grupo">
+          <input type="text" name="Olor-PPA–F013" id="Olor-PPA–F013" required class="input-text"><span class="barra"></span>
+          <label class="label-text">Olor</label>
+        </div>
+        <div class="grupo">
+          <input type="text" name="Sabor-PPA–F013" id="Sabor-PPA–F013" required class="input-text"><span class="barra"></span>
+          <label class="label-text">Sabor</label>
+        </div>
+        <div class="grupo">
+          <input type="text" name="Color-PPA–F013" id="Color-PPA–F013" required class="input-text"><span class="barra"></span>
+          <label class="label-text">Color</label>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" id="btn-registrar-F013" class="btn btn-primary submit" disabled>Guardar</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick=borrarBitacorasDelBoton()>Cerrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+<!-- Modal PPA–F014 -->
+<div class="modal" tabindex="-1" role="dialog" id="PPA–F014" onblur=borrarBitacoras()>
+<div class="modal-dialog" role="document" >
+  <div class="modal-content borde">
+    <div class="modal-header fondo-header">
+      <h5 class="modal-title" style="color: white;">Bitácora PPA–F014 - Percepción de agua producto
+      <button type="button" class="close" style="color: white; opacity: 100; outline: none;" data-dismiss="modal" aria-label="Close" onclick=borrarBitacorasDelBoton()>
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body" id="modal-body">
+      <p>Ingrese la información.</p>
+      <form action="/f014" method="post">
+        <div class="grupo">
+          <label>Fecha</label>
+          <input class="form-control" type="date" value="" id="Fecha-PPA–F014" name="Fecha-PPA–F014">
+        </div>
+        <div class="grupo">
+          <label>Hora</label>
+          <input class="form-control" type="time" value="" id="Hora-PPA–F014" name="Hora-PPA–F014">
+        </div>
+        <div class="grupo">
+          <input type="text" name="Color-PPA–F014" id="Color-PPA–F014" required class="input-text"><span class="barra"></span>
+          <label class="label-text">Color</label>
+        </div>
+        <div class="grupo">
+          <input type="number" name="Saturacion-PPA–F014" id="Saturacion-PPA–F014" required class="input-text"><span class="barra"></span>
+          <label class="label-text">Saturación</label>
+        </div>
+        <div class="grupo">
+          <input type="text" name="Olor-PPA–F014" id="Olor-PPA–F014" required class="input-text"><span class="barra"></span>
+          <label class="label-text">Olor</label>
+        </div>
+        <div class="grupo">
+          <input type="text" name="Sabor-PPA–F014" id="Sabor-PPA–F014" required class="input-text"><span class="barra"></span>
+          <label class="label-text">Sabor</label>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" id="btn-registrar-F014" class="btn btn-primary submit" disabled>Guardar</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick=borrarBitacorasDelBoton()>Cerrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+<!-- Modal PPA–F028 -->
+<div class="modal" tabindex="-1" role="dialog" id="PPA–F028" onblur=borrarBitacoras()>
+<div class="modal-dialog" role="document" >
+  <div class="modal-content borde">
+    <div class="modal-header fondo-header">
+      <h5 class="modal-title" style="color: white;">Bitácora PPA–F028 - Fisicoquímicos de agua de la red y filtros</h5>
+      <button type="button" class="close" style="color: white; opacity: 100; outline: none;" data-dismiss="modal" aria-label="Close" onclick=borrarBitacorasDelBoton()>
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body" id="modal-body">
+      <p>Ingrese la información.</p>
+      <form action="/f028" method="post">
+        <div class="grupo">
+          <label>Fecha</label>
+          <input class="form-control" type="date" value="" id="Fecha-PPA–F028" name="Fecha-PPA–F028">
+        </div>
+        <div class="grupo">
+          <label >Hora de Muestra</label>
+          <input class="form-control" type="time" value="" id="Hora-Muestra-PPA–F028" name="Hora-Muestra-PPA–F028">
+        </div>
+        <div class="grupo">
+          <label>Hora de Análisis</label>
+          <input class="form-control" type="time" value="" id="Hora-Analisis-PPA–F028" name="Hora-Analisis-PPA–F028">
+        </div>
+        <div class="grupo">
+          <input type="number" name="pH1-PPA–F028" id="pH1-PPA–F028" required class="input-text"><span class="barra"></span>
+          <label class="label-text">pH1</label>
+        </div>
+        <div class="grupo">
+          <input type="number" name="pH2-PPA–F028" id="pH2-PPA–F028" required class="input-text"><span class="barra"></span>
+          <label class="label-text">pH2</label>
+        </div>
+        <div class="grupo">
+          <input type="number" name="Olor-PPA–F028" id="Olor-PPA–F028" required class="input-text"><span class="barra"></span>
+          <label class="label-text">CE (µS/cm)</label>
+        </div>
+        <div class="grupo">
+          <input type="number" name="SD-PPA–F028" id="SD-PPA–F028" required class="input-text"><span class="barra"></span>
+          <label class="label-text">SD (ppm)</label>
+        </div>
+        <div class="grupo">
+          <input type="number" name="Cloro-Libre-Residual-PPA–F028" id="Cloro-Libre-Residual-PPA–F028" required class="input-text"><span class="barra"></span>
+          <label class="label-text">Cloro Libre Residual</label>
+        </div>
+        <div class="grupo">
+          <input type="number" name="T-PPA–F028" id="T-PPA–F028" required class="input-text"><span class="barra"></span>
+          <label class="label-text">T (°C)</label>
+        </div>
+        <div class="grupo">
+          <input type="number" name="Dureza-PPA–F028" id="Dureza-PPA–F028" required class="input-text"><span class="barra"></span>
+          <label class="label-text">Dureza (ppm)</label>
+        </div>
+        <p>
+          <b>Notas:</b>
+          <br>
+          <b>pH1</b> corresponde a las unidades obtenidas de la medición de pH con KIT de goteo con rojo de fenol.
+          <b>pH2</b> corresponde a las unidades obtenidas de la medición de pH con equipo multiparámetro.
+        </p>
+        <div class="modal-footer">
+          <button type="submit" id="btn-registrar-F028" class="btn btn-primary submit" disabled>Guardar</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick=borrarBitacorasDelBoton()>Cerrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Modal PPA–F029 -->
+<div class="modal" tabindex="-1" role="dialog" id="PPA–F029" onblur=borrarBitacoras()>
+<div class="modal-dialog" role="document" >
+  <div class="modal-content borde">
+    <div class="modal-header fondo-header">
+      <h5 class="modal-title" style="color: white;">Bitácora PPA–F029 - Fisicoquímicos de agua producto</h5>
+      <button type="button" class="close" style="color: white; opacity: 100; outline: none;" data-dismiss="modal" aria-label="Close" onclick=borrarBitacorasDelBoton()>
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body" id="modal-body">
+      <p>Ingrese la información.</p>
+      <form action="/f029" method="post">
+        <div class="grupo">
+          <label>Fecha</label>
+          <input class="form-control" type="date" value="" id="Fecha-PPA-F029" name="Fecha-PPA-F029">
+        </div>
+        <div class="grupo">
+          <label>Hora de Muestreo</label>
+          <input class="form-control" type="time" value="" id="Hora-Muestreo-PPA-F029" name="Hora-Muestreo-PPA-F029">
+        </div>
+        <div class="grupo">
+          <label>Hora de Análisis</label>
+          <input class="form-control" type="time" value="" id="Hora-Analisis-PPA-F029" name="Hora-Analisis-PPA-F029">
+        </div>
+        <div class="grupo">
+          <input type="number" name="ID-PPA-F029" id="ID-PPA-F029" required class="input-text"><span class="barra"></span>
+          <label class="label-text">ID</label>
+        </div>
+        <div class="grupo">
+          <input type="number" name="Cloro-Libre-Residual-PPA-F029" id="Cloro-Libre-Residual-PPA-F029" required class="input-text"><span class="barra"></span>
+          <label class="label-text">Cloro Libre Residual</label>
+        </div>
+        <div class="grupo">
+          <input type="number" name="pH1-PPA-F029" id="pH1-PPA-F029" required class="input-text"><span class="barra"></span>
+          <label class="label-text">pH1</label>
+        </div>
+        <div class="grupo">
+          <input type="number" name="pH2-PPA-F029" id="pH2-PPA-F029" required class="input-text"><span class="barra"></span>
+          <label class="label-text">pH2</label>
+        </div>
+        <div class="grupo">
+          <input type="number" name="Olor-PPA-F029" id="Olor-PPA-F029" required class="input-text"><span class="barra"></span>
+          <label class="label-text">CE (µS/cm)</label>
+        </div>
+        <div class="grupo">
+          <input type="number" name="SD-PPA-F029" id="SD-PPA-F029" required class="input-text"><span class="barra"></span>
+          <label class="label-text">SD (ppm)</label>
+        </div>
+        <div class="grupo">
+          <input type="number" name="T-PPA-F029" id="T-PPA-F029" required class="input-text"><span class="barra"></span>
+          <label class="label-text">T (°C)</label>
+        </div>
+        <p>
+          <b>Notas:</b>
+          <br>
+          <b>pH1</b> corresponde a las unidades obtenidas de la medición de pH con KIT de goteo con rojo de fenol.
+          <b>pH2</b> corresponde a las unidades obtenidas de la medición de pH con equipo multiparámetro.
+        </p>
+        <div class="modal-footer">
+          <button type="submit" id="btn-registrar-F029" class="btn btn-primary submit" disabled>Guardar</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick=borrarBitacorasDelBoton()>Cerrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+{%endblock%} 

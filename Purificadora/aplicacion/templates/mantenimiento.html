@@ -1,0 +1,565 @@
+{% extends 'layout.html'%} 
+{%block tittle%}Mantenimiento{%endblock%}
+{% block content %}
+{% with messages = get_flashed_messages() %}
+	{% if messages %}
+	{% for message in messages %}
+	<div class="alert alert-success alert-dismissible fade show" role="alert">
+		{{message}}
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		  <span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	{% endfor %}
+	{% endif %}
+	{% endwith %}
+<!-- Contenido -->
+<div class="container-md" id="content">
+  <div id="cabecera">
+    <span id="line">índice:</span>
+    <span id="tagline">Mantenimiento</span>
+  </div>
+  <div class="row">
+    <!-- Card PPA-F003 -->
+    <div class="col-xs-12 col-xl-6">
+      <div class="box">
+        <!-- Icon Image -->
+        <div class="box-icon">
+          <span><img src="{{ url_for('static', filename='img/reportes.jpg')}}" class="reporte"></span>
+        </div>
+        <!-- body -->
+        <div class="info">
+          <h4 class="text-center">PPA-F003</h4>
+          <h5 class="text-center">Limpieza de dispensador</h5>
+          <div>  
+            <div class="card bg-primary">
+              <a href="" id="btn-modal-F003">
+                <div class="card-body text-center" >
+                Agregar
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!--Card PPA-F004-->
+    <div class="col-xs-12  col-xl-6">
+      <div class="box">
+        <!-- Icon Image -->  
+        <div class="box-icon">
+          <span><img src="{{ url_for('static', filename='img/reportes.jpg')}}" class="reporte"></span>
+        </div>
+        <!-- body -->
+        <div class="info">
+          
+          <h4 class="text-center">PPA-F004</h4>
+          <h5 class="text-center">Mantenimiento de filtro pulidor</h5>
+
+          <div>
+            <div class="card bg-primary">
+              <a href="" id="btn-modal-F004">
+                <div class="card-body text-center">
+                Agregar
+                </div>
+              </a>
+            </div>
+          </div>        
+        </div>  
+      </div>
+    </div>
+    <!--Card PPA-F0017-->
+    <div class="col-xs-12  col-xl-6">
+      <div class="box">
+        <!-- Icon Image -->       
+        <div class="box-icon">
+          <span><img src="{{ url_for('static', filename='img/reportes.jpg')}}" class="reporte"></span>
+        </div>
+        <!-- body -->
+        <div class="info">
+          
+          <h4 class="text-center">PPA-F017</h4>
+          <h5 class="text-center">Regeneración del filtro suavizador</h5>
+
+          <div>
+            <div class="card bg-primary">
+              <a href="" id="btn-modal-F017">
+                <div class="card-body text-center">
+                Agregar
+                </div>
+              </a>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+
+    <!--Card PPA-F0018-->
+    <div class="col-xs-12  col-xl-6">
+      <div class="box">
+        <!-- Icon Image -->      
+        <div class="box-icon">
+          <span><img src="{{ url_for('static', filename='img/reportes.jpg')}}" class="reporte"></span>
+        </div>
+        <!-- body -->
+        <div class="info">
+          
+          <h4 class="text-center">PPA-F018</h4>
+          <h5 class="text-center">Retrolavado del filtro de carbón activado</h5>
+
+          <div>
+            <div class="card bg-primary">
+              <a href="" id="btn-modal-F018">
+                <div class="card-body text-center">
+                Agregar
+                </div>
+              </a>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+
+    <!--Card PPA-F0019-->
+    <div class="col-xs-12 col-xl-6">
+      <div class="box">
+        <!-- Icon Image -->
+        <div class="box-icon">
+          <span><img src="{{ url_for('static', filename='img/reportes.jpg')}}" class="reporte"></span>
+        </div>
+        <!-- body -->
+        <div class="info">
+          <h4 class="text-center">PPA-F019</h4>
+          <h5 class="text-center">Retrolavado de filtro de lecho profundo</h5>
+
+          <div>
+            <div class="card bg-primary">
+              <a href="" id="btn-modal-F019">
+                <div class="card-body text-center">
+                Agregar
+                </div>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!--Card PPA-F025-->
+    <div class="col-xs-12  col-xl-6">
+      <div class="box">
+        <!-- Icon Image --> 
+        <div class="box-icon">
+          <span><img src="{{ url_for('static', filename='img/reportes.jpg')}}" class="reporte"></span>
+        </div>
+        <!-- body -->
+        <div class="info">
+          
+          <h4 class="text-center">PPA-F025</h4>
+          <h5 class="text-center">Mantenimiento de filtro de osmosis inversa</h5>
+
+          <div>
+            <div class="card bg-primary">
+              <a href="" id="btn-modal-F025">
+                <div class="card-body text-center">
+                Agregar
+                </div>
+              </a>
+            </div>       
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <!--Card PPA-F0026-->
+    <div class="col-xs-12  col-xl-6">
+      <div class="box">
+        <!-- Icon Image -->  
+        <div class="box-icon">
+          <span><img src="{{ url_for('static', filename='img/reportes.jpg')}}" class="reporte"></span>
+        </div>
+        <!-- body -->
+        <div class="info">
+          
+          <h4 class="text-center">PPA-F026</h4>
+          <h5 class="text-center">Limpieza de cisterna de agua cruda</h5>
+
+          <div>
+            <div class="card bg-primary">
+              <a href="" id="btn-modal-F026">
+                <div class="card-body text-center">
+                Agregar
+                </div>
+              </a>
+            </div>
+          </div> 
+          
+        </div>
+      </div>
+    </div>
+
+    <!--Card PPA-F0027-->
+    <div class="col-xs-12  col-xl-6">
+      <div class="box">
+        <!-- Icon Image -->
+        <div class="box-icon">
+          <span><img src="{{ url_for('static', filename='img/reportes.jpg')}}" class="reporte"></span>
+        </div>
+        <!-- body -->
+        <div class="info">
+          <h4 class="text-center">PPA-F027</h4>
+          <h5 class="text-center">Limpieza de cisterna de agua producto</h5>
+          <div>
+            <div class="card bg-primary">
+              <a href="" id="btn-modal-F027">
+                <div class="card-body text-center">
+                Agregar
+                </div>
+              </a>
+            </div>
+          </div> 
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Ventana modal de los formatos de mantenimiento-->
+<!--PPA-F003 Modal-->
+<div class="modal" tabindex="-1" role="dialog" id="PPA-F003" onblur=borrarBitacoras()>
+<div class="modal-dialog" role="document" >
+  <div class="modal-content borde">
+    <div class="modal-header fondo-header">
+      <h5 class="modal-title" style="color: white;">Bitácora PPA-F003 - Limpieza de dispensador</h5>
+      <button type="button" class="close" style="color: white; opacity: 100; outline: none;" data-dismiss="modal" aria-label="Close" onclick=borrarBitacorasDelBoton()>
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body" id="modal-body">
+      <p>Ingrese la información.</p>
+      <form action="/f003" method="POST">
+
+        <div class="grupo">
+          <label>Fecha:</label>
+          <input class="form-control" type="date" name="Fecha-F003" id="Fecha-F003" required>
+        </div>
+
+        <div class="grupo">
+          <label >Hora:</label>
+          <input class="form-control" type="time" name="Hora-F003" id="Hora-F003" required>
+        </div>
+
+        <div class="grupo">
+          <input type="text" name="Resguardo-F003" id="Resguardo-F003" required class="input-text"><span class="barra"></span>
+          <label class="label-text">Resguardo</label>
+        </div>
+
+        <div class="grupo">
+          <input type="text" name="Ubicacion-F003" id="Ubicacion-F003" required class="input-text"><span class="barra"></span>
+          <label class="label-text">Ubicación</label>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" id="btn-registrar-F003" class="btn btn-primary submit" disabled >Guardar</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick=borrarBitacorasDelBoton()>Cerrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+
+<!--PPA-F004 Modal-->
+<div class="modal" tabindex="-1" role="dialog" id="PPA-F004" onblur=borrarBitacoras()>
+<div class="modal-dialog" role="document" >
+  <div class="modal-content borde">
+    <div class="modal-header fondo-header">
+      <h5 class="modal-title" style="color: white;">Bitácora PPA-F004 - Mantenimiento de filtro pulidor</h5>
+      <button type="button" class="close" style="color: white; opacity: 100; outline: none;" data-dismiss="modal" aria-label="Close" onclick=borrarBitacorasDelBoton()>
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body" id="modal-body">
+      <p>Ingrese la información.</p>
+      <form action="/f004" method="POST">
+        <div class="grupo">
+          <label>Fecha:</label>
+          <input class="form-control" type="date" name="Fecha-F004" id="Fecha-F004" required>
+        </div>
+
+        <div class="grupo">
+          <label>Hora:</label>
+          <input class="form-control" type="time" name="Hora-F004" id="Hora-F004" required>
+        </div>
+
+        <div class="grupo">
+          <input type="text" name="Tipo-Operacion-F004" id="Tipo-Operacion-F004" required class="input-text"><span class="barra"></span>
+          <label class="label-text">Tipo de operación</label>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" id="btn-registrar-F004" class="btn btn-primary submit" disabled >Guardar</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick=borrarBitacorasDelBoton()>Cerrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+<!--PPA-F017 Modal-->
+<div class="modal" tabindex="-1" role="dialog" id="PPA-F017" onblur=borrarBitacoras()>
+<div class="modal-dialog" role="document" >
+  <div class="modal-content borde">
+    <div class="modal-header fondo-header">
+      <h5 class="modal-title" style="color: white;">Bitácora PPA-F017 - Regeneración del filtro suavizador</h5>
+      <button type="button" class="close" style="color: white; opacity: 100; outline: none;" data-dismiss="modal" aria-label="Close" onclick=borrarBitacorasDelBoton()>
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body" id="modal-body">
+      <p>Ingrese la información.</p>
+      <form action="/f017" method="POST">
+
+        <div class="grupo">
+          <label>Fecha:</label>
+          <input class="form-control" type="date" name="Fecha-F017" id="Fecha-F017" required>
+        </div>
+
+        <div class="grupo">
+          <input type="number" name="Sal-F017" id="Sal-F017" required class="input-text"><span class="barra"></span>
+          <label class="label-text">Sal (kg)</label>
+        </div>
+
+        <div class="grupo">
+          <table class="table table-check table-responsive-sm">
+            <tbody>
+                <tr>
+                  <td class="table-check-td" colspan="2">Hora</td>
+                </tr>
+                <tr>
+                  <td>Encendido</td>
+                  <td>Apagado</td>
+                </tr>
+                <tr>
+                  <td><input class="form-control" type="time" name="Hora-Encendido-F017" id="Hora-Encendido-F017" required></td>
+                  <td><input class="form-control" type="time" name="Hora-Apagado-F017" id="Hora-Apagado-F017" required></td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" id="btn-registrar-F017" class="btn btn-primary submit" disabled >Guardar</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick=borrarBitacorasDelBoton()>Cerrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+
+<!--PPA-F018 Modal-->
+<div class="modal" tabindex="-1" role="dialog" id="PPA-F018" onblur=borrarBitacoras()>
+<div class="modal-dialog" role="document" >
+  <div class="modal-content borde">
+    <div class="modal-header fondo-header">
+      <h5 class="modal-title" style="color: white;">Bitácora PPA-F018 - Retrolavado del filtro de carbón activado</h5>
+      <button type="button" class="close" style="color: white; opacity: 100; outline: none;" data-dismiss="modal" aria-label="Close" onclick=borrarBitacorasDelBoton()>
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body" id="modal-body">
+      <p>Ingrese la información.</p>
+      <form action="/f018" method="POST">
+
+        <div class="grupo">
+          <label>Fecha:</label>
+          <input class="form-control" type="date" name="Fecha-F018" id="Fecha-F018" required>
+        </div>
+
+        <div class="grupo">
+          <table class="table table-check table-responsive-sm">
+            <tbody>
+                <tr>
+                  <td class="table-check-td" colspan="2">Hora</td>
+                </tr>
+                <tr>
+                  <td>Encendido</td>
+                  <td>Apagado</td>
+                </tr>
+                <tr>
+                  <td><input class="form-control" type="time" name="Hora-Encendido-F018" id="Hora-Encendido-F018" required></td>
+                  <td><input class="form-control" type="time" name="Hora-Apagado-F018" id="Hora-Apagado-F018" required></td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" id="btn-registrar-F018" class="btn btn-primary submit" disabled >Guardar</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick=borrarBitacorasDelBoton()>Cerrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+
+<!--PPA-F019 Modal-->
+<div class="modal" tabindex="-1" role="dialog" id="PPA-F019" onblur=borrarBitacoras()>
+<div class="modal-dialog" role="document" >
+  <div class="modal-content borde">
+    <div class="modal-header fondo-header">
+      <h5 class="modal-title" style="color: white;">Bitácora PPA-F019 - Retrolavado de filtro de lecho profundo</h5>
+      <button type="button" class="close" style="color: white; opacity: 100; outline: none;" data-dismiss="modal" aria-label="Close" onclick=borrarBitacorasDelBoton()>
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body" id="modal-body">
+      <p>Ingrese la información.</p>
+      <form action="/f019" method="POST">
+        <div class="grupo">
+          <label>Fecha:</label>
+          <input class="form-control" type="date" name="Fecha-F019" id="Fecha-F019" required>
+        </div>
+
+        <div class="grupo">
+          <table class="table table-check table-responsive-sm">
+            <tbody>
+                <tr>
+                  <td class="table-check-td" colspan="2">Hora</td>
+                </tr>
+                <tr>
+                  <td>Encendido</td>
+                  <td>Apagado</td>
+                </tr>
+                <tr>
+                  <td><input class="form-control" type="time" name="Hora-Encendido-F019" id="Hora-Encendido-F019" required></td>
+                  <td><input class="form-control" type="time" name="Hora-Apagado-F019" id="Hora-Apagado-F019" required></td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" id="btn-registrar-F019" class="btn btn-primary submit" disabled >Guardar</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick=borrarBitacorasDelBoton()>Cerrar</button>
+        </div>
+      </form>
+    </div>
+    
+  </div>
+</div>
+</div>
+
+<!--PPA-F025 Modal-->
+<div class="modal" tabindex="-1" role="dialog" id="PPA-F025" onblur=borrarBitacoras()>
+<div class="modal-dialog" role="document" >
+  <div class="modal-content borde">
+    <div class="modal-header fondo-header">
+      <h5 class="modal-title" style="color: white;">Bitácora PPA-F025 - Mantenimiento de filtro de osmosis inversa</h5>
+      <button type="button" class="close" style="color: white; opacity: 100; outline: none;" data-dismiss="modal" aria-label="Close" onclick=borrarBitacorasDelBoton()>
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body" id="modal-body">
+      <p>Ingrese la información.</p>
+      <form action="/f025" method="post">
+        <div class="grupo">
+          <label>Fecha:</label>
+          <input class="form-control" type="date" name="Fecha-F025" id="Fecha-F025" required>
+        </div>
+
+        <div class="grupo">
+          <label>Hora:</label>
+          <input class="form-control" type="time" name="Hora-F025" id="Hora-F025" required>
+        </div>
+        <div class="grupo">
+          <input type="text" name="Tipo-Operacion-F025" id="Tipo-Operacion-F025" required class="input-text"><span class="barra"></span>
+          <label class="label-text">Tipo de operación</label>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" id="btn-registrar-F025" class="btn btn-primary submit" disabled >Guardar</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick=borrarBitacorasDelBoton()>Cerrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+
+<!--PPA-F026 Modal-->
+<div class="modal" tabindex="-1" role="dialog" id="PPA-F026" onblur=borrarBitacoras()>
+<div class="modal-dialog" role="document" >
+  <div class="modal-content borde">
+    <div class="modal-header fondo-header">
+      <h5 class="modal-title" style="color: white;">Bitácora PPA-F026 - Limpieza de cisterna de agua cruda</h5>
+      <button type="button" class="close" style="color: white; opacity: 100; outline: none;" data-dismiss="modal" aria-label="Close" onclick=borrarBitacorasDelBoton()>
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body" id="modal-body">
+      <p>Ingrese la información.</p>
+      <form action="/f026" method="post">
+        <div class="grupo">
+          <label>Fecha:</label>
+          <input class="form-control" type="date" name="Fecha-F026" id="Fecha-F026" required>
+        </div>
+
+        <div class="grupo">
+          <label>Hora:</label>
+          <input class="form-control" type="time" name="Hora-F026" id="Hora-F026" required>
+        </div>
+
+        <div class="grupo">
+          <input type="text" name="Observaciones-F026" id="Observaciones-F026" required class="input-text"><span class="barra"></span>
+          <label class="label-text">Observaciones</label>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" id="btn-registrar-F026" class="btn btn-primary submit" disabled >Guardar</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick=borrarBitacorasDelBoton()>Cerrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+
+<!--PPA-F027 Modal-->
+<div class="modal" tabindex="-1" role="dialog" id="PPA-F027" onblur=borrarBitacoras()>
+<div class="modal-dialog" role="document" >
+  <div class="modal-content borde">
+    <div class="modal-header fondo-header">
+      <h5 class="modal-title" style="color: white;">Bitácora PPA-F027 - Limpieza de cisterna de agua producto</h5>
+      <button type="button" class="close" style="color: white; opacity: 100; outline: none;" data-dismiss="modal" aria-label="Close" onclick=borrarBitacorasDelBoton()>
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body" id="modal-body">
+      <p>Ingrese la información.</p>
+      <form action="/f027" method="post">
+        <div class="grupo">
+          <label>Fecha:</label>
+          <input class="form-control" type="date" name="Fecha-F027" id="Fecha-F027" required>
+        </div> 
+
+        <div class="grupo">
+          <label>Hora:</label>
+          <input class="form-control" type="time" name="Hora-F027" id="Hora-F027" required>
+        </div>
+
+        <div class="grupo">
+          <input type="text" name="Observaciones-F027" id="Observaciones-F027" required class="input-text"><span class="barra"></span>
+          <label class="label-text">Observaciones</label>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" id="btn-registrar-F027" class="btn btn-primary submit" disabled >Guardar</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick=borrarBitacorasDelBoton()>Cerrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+<!-- /#page-content-wrapper -->
+{%endblock%}

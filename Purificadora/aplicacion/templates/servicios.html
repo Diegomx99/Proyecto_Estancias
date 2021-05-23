@@ -1,0 +1,187 @@
+{% extends 'layout.html'%} 
+{%block tittle%}Servicios{%endblock%}
+{% block content %} 
+{% with messages = get_flashed_messages() %}
+	{% if messages %}
+	{% for message in messages %}
+	<div class="alert alert-success alert-dismissible fade show" role="alert">
+		{{message}}
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		  <span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	{% endfor %}
+	{% endif %}
+	{% endwith %}
+<!-- Contenido -->
+<div class="container-md" id="content">
+  <div id="cabecera">
+    <span id="line">índice:</span>
+    <span id="tagline">Servicios</span>
+  </div>
+  <div class="row">
+      <!-- Card PPA – F020  -->
+      <div class="col-xs-12 col-xl-6">
+        <div class="box">
+            <!-- Icon Image -->
+            <div class="box-icon">
+              <span><img src="{{ url_for('static', filename='img/reportes.jpg')}}" class="reporte"></span>
+            </div>
+            <!-- body -->
+            <div class="info">
+              <h4 class="text-center">PPA–F020</h4>
+              <h5 class="text-center">Solicitud y entrega de agua destilada</h5>
+              <div class="card bg-primary">
+                  <a href="" id="" data-toggle="modal" data-target="#PPA–F020">
+                      <div class="card-body text-center">
+                      Agregar
+                      </div>
+                  </a>
+              </div>
+            </div>
+        </div>
+      </div>
+      <!-- Card PPA – F021  -->
+      <div class="col-xs-12 col-xl-6">
+        <div class="box">
+            <!-- Icon Image -->
+            <div class="box-icon">
+              <span><img src="{{ url_for('static', filename='img/reportes.jpg')}}" class="reporte"></span>
+            </div>
+            <!-- body -->
+            <div class="info">
+              <h4 class="text-center">PPA-F021</h4>
+              <h5 class="text-center">Registro de solicitud y entrega de agua embotellada</h5>
+              <div class="card bg-primary">
+                  <a href="" id="btn-modal-F021">
+                      <div class="card-body text-center">
+                      Agregar
+                      </div>
+                  </a>
+              </div>
+            </div>
+        </div>
+      </div>
+      <!-- END OF CONTENT -->
+  </div>
+</div>
+<!-- Modals -->
+
+<!-- Modal PPA–F020 -->
+<div class="modal" tabindex="-1" role="dialog" id="PPA–F020" onblur=borrarBitacoras()>
+<div class="modal-dialog" role="document" >
+  <div class="modal-content borde">
+    <div class="modal-header fondo-header">
+      <h5 class="modal-title" style="color: white;">Bitácora PPA–F020 - Solicitud y entrega de agua destilada</h5>
+      <button type="button" class="close" style="color: white; opacity: 100; outline: none;" data-dismiss="modal" aria-label="Close" onclick=borrarBitacorasDelBoton()>
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body" id="modal-body">
+      <p>Ingrese la información. </p>
+      <form action="/f020" method="post">
+        <div class="grupo">
+          <label>Fecha de Solicitud</label>
+          <input class="form-control" type="date" id="Fecha-Solicitud-F020" name="Fecha-Solicitud-F020">
+        </div>
+        <div class="grupo">
+          <input type="text" name="Area-F020" id="Area-F020" required class="input-text"><span class="barra"></span>
+          <label class="label-text">Área que solicita</label>
+        </div>
+        <div class="grupo">
+          <input type="number" name="Volumen-F020" id="Volumen-F020" required class="input-text"><span class="barra"></span>
+          <label class="label-text">Volumen</label>
+        </div>
+        <div class="grupo">
+          <label>Fecha de Entrega</label>
+          <input class="form-control" type="date" id="Fecha-Entrega-F020" name="Fecha-Entrega-F020">
+        </div>
+        <div class="grupo">
+          <input type="text" name="Persona-Entrego-F020" id="Persona-Entrego-F020" required class="input-text"><span class="barra"></span>
+          <label class="label-text">Persona que Entregó</label>
+        </div>
+        <div class="grupo">
+          <input type="text" name="Nombre-Solicitante-F020" id="Nombre-Solicitante-F020" required class="input-text"><span class="barra"></span>
+          <label class="label-text">Nombre del Solicitante</label>
+        </div>
+        <div class="grupo">
+          <input type="text" name="Firma-Receptor-F020" id="Firma-Receptor-F020" required class="input-text"><span class="barra"></span>
+          <label class="label-text">Firma del Receptor</label>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" id="btn-registrar-F020" class="btn btn-primary submit" disabled>Guardar</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick=borrarBitacorasDelBoton()>Cerrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+<!--PPA-F021 Modal-->
+<div class="modal" tabindex="-1" role="dialog" id="PPA-F021" onblur=borrarBitacoras()>
+<div class="modal-dialog" role="document" >
+  <div class="modal-content borde">
+    <div class="modal-header fondo-header">
+      <h5 class="modal-title" style="color: white;">Bitácora PPA-F021 - Registro de solicitud y entrega de agua embotellada</h5>
+      <button type="button" class="close" style="color: white; opacity: 100; outline: none;" data-dismiss="modal" aria-label="Close" onclick=borrarBitacorasDelBoton()>
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body" id="modal-body">
+      <p>Ingrese la información.</p>
+      <form action="/f021" method="post">
+        <div class="grupo">
+          <label>Fecha de solicitud:</label>
+          <input class="form-control" type="date" name="Fecha-Solicitud-F021" id="Fecha-Solicitud-F021" required>
+        </div>
+
+        <div class="grupo">
+          <input type="text" name="Area-F021" id="Area-F021" required class="input-text"><span class="barra"></span>
+          <label class="label-text">Área que solicita</label>
+        </div>
+
+        <div class="grupo">
+          <input type="text" name="Solicitante-F021" id="Solicitante-F021" required class="input-text"><span class="barra"></span>
+          <label class="label-text">Solicitante</label>
+        </div>
+
+        <div class="grupo">
+          <input type="number" name="Unidades-Solicitadas-F021" id="Unidades-Solicitadas-F021" required class="input-text"><span class="barra"></span>
+          <label class="label-text">Unidades solicitadas</label>
+        </div>
+
+        <div class="grupo">
+          <label>Fecha de entrega</label>
+          <input class="form-control" type="date" name="Fecha-Entrega-F021" id="Fecha-Entrega-F021" required>
+        </div>
+
+        <div class="grupo">
+          <input type="number" name="Unidades-Entregadas-F021" id="Unidades-Entregadas-F021" required class="input-text"><span class="barra"></span>
+          <label class="label-text">Unidades entregadas</label>
+        </div>
+
+        <div class="grupo">
+          <input type="text" name="Persona-Entrego-F021" id="Persona-Entrego-F021" required class="input-text"><span class="barra"></span>
+          <label class="label-text">Persona que entregó</label>
+        </div>
+
+        <div class="grupo">
+          <input type="text" name="Nombre-Receptor-F021" id="Nombre-Receptor-F021" required class="input-text"><span class="barra"></span>
+          <label class="label-text">Nombre del receptor</label>
+        </div>
+
+        <div class="grupo">
+          <input type="text" name="Firma-Receptor-F021" id="Firma-Receptor-F021" required class="input-text"><span class="barra"></span>
+          <label class="label-text">Firma del receptor</label>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" id="btn-registrar-F021" class="btn btn-primary submit" disabled>Guardar</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick=borrarBitacorasDelBoton()>Cerrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+<!-- /#page-content-wrapper -->
+{%endblock%}

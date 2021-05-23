@@ -1,0 +1,190 @@
+{% extends 'layout.html'%}
+{%block tittle%}Distribución{%endblock%}
+{% block content %}
+{% with messages = get_flashed_messages() %}
+	{% if messages %}
+	{% for message in messages %}
+	<div class="alert alert-success alert-dismissible fade show" role="alert">
+		{{message}}
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		  <span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	{% endfor %}
+	{% endif %}
+{% endwith %}
+<!-- Contenido -->
+<div class="container-md" id="content">
+  <div id="cabecera">
+    <span id="line">índice:</span>
+    <span id="tagline">Distribución</span>
+  </div>
+  <div class="row">
+    <!-- Card PPA–F002 -->
+    <div class="col-xs-12 col-xl-6">
+      <div class="box">
+        <!-- Icon Image -->
+        <div class="box-icon">
+          <span><img src="{{url_for('static', filename='img/reportes.jpg')}}" class="reporte"></span>
+        </div>
+        <!-- body -->
+        <div class="info">
+          <h4 class="text-center">PPA–F002</h4>
+          <h5 class="text-center">Retorno de garrafones de agua</h5>
+          <div>
+            <div class="card bg-primary">
+              <a href="" id="">
+                <div class="card-body text-center" id="btn-modal-F002">
+                  Agregar
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card PPA–F023 -->
+    <div class="col-xs-12 col-xl-6">
+      <div class="box">
+        <!-- Icon Image -->
+        <div class="box-icon">
+          <span><img src="{{url_for('static', filename='img/reportes.jpg')}}" class="reporte"></span>
+        </div>
+        <!-- body -->
+        <div class="info">
+          <h4 class="text-center">PPA–F023</h4>
+          <h5 class="text-center">Ubicación de garrafones de agua</h5>
+          <div>
+            <div class="card bg-primary">
+              <a href="" id="">
+                <div class="card-body text-center" id="btn-modal-F023">
+                  Agregar
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PPA-F002 -->
+<div class="modal" tabindex="-1" role="dialog" id="PPA-F002" onblur=borrarBitacoras()>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content borde">
+      <div class="modal-header fondo-header">
+        <h5 class="modal-title" style="color: white;">Bitácora F002 - Retorno de garrafones de agua</h5>
+        <button type="button" class="close" style="color: white; opacity: 100; outline: none;" data-dismiss="modal" aria-label="Close" onclick=borrarBitacorasDelBoton()>
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <p>Ingrese la información.</p>
+        <form action="/f002" method="POST">
+          <div class="grupo">
+            <input type="text" name="Garrafon-F002" id="Garrafon-F002" required class="input-text"><span
+              class="barra"></span>
+            <label class="label-text">Garrafón</label>
+          </div>
+          <div class="grupo">
+            <label>Fecha inicio:</label>
+            <input class="form-control" type="date" name="Fecha-inicio-F002" id="Fecha-inicio-F002" required>
+          </div>
+
+          <div class="grupo">
+            <label>Fecha fin:</label>
+            <input class="form-control" type="date" name="Fecha-fin-F002" id="Fecha-fin-F002" required>
+          </div>
+
+          <div class="grupo">
+            <table class="table table-check table-responsive" style="overflow-y: hidden">
+              <tbody>
+                <tr>
+                  <td class="table-check-td">Lunes</td>
+                  <td class="table-check-td">Martes</td>
+                  <td class="table-check-td">Miércoles</td>
+                  <td class="table-check-td">Jueves</td>
+                  <td class="table-check-td">Viernes</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="checkbox1-f002" value="1" id="Checkbox-l-F002" onclick=validarTotal(this)></td>
+                  <td><input type="checkbox" name="checkbox2-f002" value="1" id="Checkbox-m-F002" onclick=validarTotal(this)></td>
+                  <td><input type="checkbox" name="checkbox3-f002" value="1" id="Checkbox-mi-F002" onclick=validarTotal(this)></td>
+                  <td><input type="checkbox" name="checkbox4-f002" value="1" id="Checkbox-j-F002" onclick=validarTotal(this)></td>
+                  <td><input type="checkbox" name="checkbox5-f002" value="1" id="Checkbox-v-F002" onclick=validarTotal(this)></td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+          <label id="labelTotal">Total = </label> <label id="labelResultado">0 </label>
+
+          <div class="grupo">
+            <textarea class="input-textarea" name="Observaciones-F002" id="Observaciones-F002" cols="30" rows="5"
+              required></textarea><span class="barra"></span>
+            <label class="label-textarea">Observaciones</label>
+          </div>
+
+          
+
+          <div class="modal-footer">
+            <button type="submit" id="btn-crear-F002" class="btn btn-primary submit" disabled>Guardar</button>
+            <button type="button" id="btn-cerrar-F002" class="btn btn-secondary" data-dismiss="modal" onclick=borrarBitacorasDelBoton()>Cerrar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PPA-F023 -->
+
+<div class="modal" tabindex="-1" role="dialog" id="PPA-F023" onblur=borrarBitacoras()>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content borde">
+      <div class="modal-header fondo-header">
+        <h5 class="modal-title" style="color: white;">Bitácora F023 - Ubicación de garrafones de agua</h5>
+        <button type="button" class="close" style="color: white; opacity: 100; outline: none;" data-dismiss="modal" aria-label="Close" onclick=borrarBitacorasDelBoton()>
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body" id="modal-body">
+        <p>Ingrese la información.</p>
+        <form action="/f023" method="POST">
+
+          <div class="grupo">
+            <label>Fecha:</label>
+            <input class="form-control" type="date" name="Fecha-F023" id="Fecha-F023" required>
+          </div>
+
+          <div class="grupo">
+            <input type="text" name="Codigo-F023" id="Codigo-F023" required class="input-text"><span
+              class="barra"></span>
+            <label class="label-text">Código</label>
+          </div>
+
+          <div class="grupo">
+            <input type="text" name="Edificio-F023" id="Edificio-F023" required class="input-text"><span
+              class="barra"></span>
+            <label class="label-text">Edificio</label>
+          </div>
+
+          <div class="grupo">
+            <input type="number" name="Piso-F023" id="Piso-F023" required class="input-text"><span class="barra"></span>
+            <label class="label-text">Piso</label>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" id="btn-registrar-F023" class="btn btn-primary submit" disabled>Guardar</button>
+            <button type="button" id="btn-cerrar-F023" class="btn btn-secondary" data-dismiss="modal" onclick=borrarBitacorasDelBoton()>Cerrar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /#page-content-wrapper -->
+{%endblock%}
